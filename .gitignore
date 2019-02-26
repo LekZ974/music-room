@@ -1,0 +1,5 @@
+.idea/
+react-front/node_modules
+react-front/.expo
+db/data
+api/node_modules
