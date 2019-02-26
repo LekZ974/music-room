@@ -1,7 +1,7 @@
 version: '3.5'
 services:
   swift:
-    image: swiftdocker/swift:latest
+    build: ios/.
     ports:
       - "5000:5000"
     volumes:
@@ -11,8 +11,6 @@ services:
   react:
     build: react-front/.
     restart: always
-    env_file:
-      - .env
     volumes:
       - ./react-front:/usr/src/react-front
     ports:
@@ -30,7 +28,7 @@ services:
       links:
         - db
   db:
-    image: bitnami/mongodb:latest
+    build: db/.
     restart: always
     ports:
       - "27017:27017"
