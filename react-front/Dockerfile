@@ -1,12 +1,18 @@
-FROM node:latest
-RUN mkdir -p /usr/src/react-front
-WORKDIR /usr/src/react-front
+FROM node:9
+ARG USR=user
 
-RUN npm set progress=false && \
-npm install -g expo-cli && \
-npm install
+#Does all the things we need to do as root
+RUN apt-get update && \
+  apt-get install sudo && \
+  useradd -ms /bin/bash $USR && \
+  usermod -aG sudo $USR && \
+  echo "$USR ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers && \
+  mkdir /app && \
+  chown -R $USR:$USR /app/ && \
+  npm install -g expo-cli
 
-CMD [ "expo", "start", "--tunnel", "--send-to","hoa.alexandre@gmail.com"]
+USER $USR:$USR
+WORKDIR /app
+ADD . /app/.
 
-EXPOSE 19000
-EXPOSE 19001
+CMD ["yarn", "start"]
