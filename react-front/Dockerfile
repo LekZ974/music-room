@@ -1,18 +1,17 @@
 FROM node:9
-ARG USR=user
 
-#Does all the things we need to do as root
-RUN apt-get update && \
-  apt-get install sudo && \
-  useradd -ms /bin/bash $USR && \
-  usermod -aG sudo $USR && \
-  echo "$USR ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers && \
-  mkdir /app && \
-  chown -R $USR:$USR /app/ && \
-  npm install -g expo-cli
-
-USER $USR:$USR
 WORKDIR /app
-ADD . /app/.
 
-CMD ["yarn", "start"]
+RUN yarn global add expo-cli
+# RUN exp login --username javamu --password supersecret
+# Install app dependencies
+# A wildcard is used to ensure both package.json AND package-lock.json are copied
+# where available (npm@5+)
+COPY package*.json ./
+
+RUN yarn install
+# If you are building your code for production
+# RUN npm install --only=production
+
+# Bundle app source
+COPY . .
