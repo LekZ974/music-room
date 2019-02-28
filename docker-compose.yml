@@ -1,36 +1,36 @@
 version: '3.5'
 services:
-  swift:
-    build: ios/.
-    ports:
-      - "5000:5000"
-    volumes:
-      - ./ios:/usr/src/ios
-    links:
-      - api
+#  swift:
+#    build: ios/.
+#    restart: always
+#    ports:
+#      - "5000:5000"
+#    volumes:
+#      - ./ios:/app/src/ios
+#    links:
+#      - api
   react:
     build: react-front/.
-    restart: always
+    env_file:
+      - .env
     volumes:
-      - ./react-front:/usr/src/react-front
+      - ./react-front:/app
     ports:
       - "19000:19000"
       - "19001:19001"
+      - "19002:19002"
     links:
       - api
   api:
       build: api/.
-      restart: always
       volumes:
-        - ./api:/usr/src/api
+        - ./api:/api
       ports:
         - "4242:4242"
-      links:
-        - db
-  db:
-    build: db/.
-    restart: always
-    ports:
-      - "27017:27017"
-    volumes:
-      - ./db/data:/db/data
+#  db:
+#    build: db/.
+#    restart: always
+#    ports:
+#      - "27017:27017"
+#    volumes:
+#      - ./db/data:/db/data
