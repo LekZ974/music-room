@@ -13,11 +13,8 @@ services:
     build: react-front/.
     env_file:
       - .env
-    command: bash -c "expo login --username ${USERNAME} --password ${PASSWORD} && yarn start --tunnel"
-    restart: always
     volumes:
       - ./react-front:/app
-      - /app/node_modules/
     ports:
       - "19000:19000"
       - "19001:19001"
@@ -26,11 +23,8 @@ services:
       - api
   api:
       build: api/.
-      command: yarn start
-      restart: always
       volumes:
         - ./api:/api
-        - /api/node_modules/
       ports:
         - "4242:4242"
 #  db:
