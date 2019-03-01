@@ -1,13 +1,11 @@
-import { combineReducers } from 'redux'
+import { combineReducers } from 'redux';
 
-import alert from './alert.js'
+import alert from './alert';
 
 const appReducer = combineReducers({
   alert,
-})
+});
 
-const rootReducer = (state, action) => {
-  return appReducer(state, action)
-}
+const rootReducer = (state, action) => appReducer(state, action);
 
-export default rootReducer
+export default rootReducer;
