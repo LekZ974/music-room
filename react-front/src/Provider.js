@@ -1,9 +1,16 @@
-import React from 'react'
+import React from 'react';
 
-import Main from './Main'
+import { Provider } from 'react-redux';
+import store from './redux/store';
+
+import Main from './Main';
+import { alert } from './redux/actions/alert';
 
 const WrapperProvider = () => (
+  <Provider store={store}>
     <Main />
-)
+  </Provider>
+);
 
-export default WrapperProvider
+store.dispatch(alert('Soon, will be here a fantastic Music Room ...'));
+export default WrapperProvider;

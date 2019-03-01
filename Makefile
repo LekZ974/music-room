@@ -19,6 +19,9 @@ stop-dev:
 	@docker-compose stop
 
 expo:
-	@docker-compose run react bash -c "expo login --username ${USERNAME} --password ${PASSWORD} && yarn start --tunnel"
+	@docker-compose run --service-ports react bash -c "expo login --username ${USERNAME} --password ${PASSWORD} && yarn start --tunnel"
 
-.PHONY: build install-expo install-api install start-dev stop-dev expo
+test:
+	@docker-compose run react yarn test
+
+.PHONY: build install-expo install-api install start-dev stop-dev expo test

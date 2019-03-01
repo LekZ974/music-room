@@ -1,9 +1,10 @@
-import React from 'react'
-import { Root } from 'native-base'
-import Provider from './src/Provider'
+import React from 'react';
+import { Root } from 'native-base';
+import Provider from './src/Provider';
 
-export default () => (
+const App = () => (
   <Root>
     <Provider />
   </Root>
-)
+);
+export default App;
