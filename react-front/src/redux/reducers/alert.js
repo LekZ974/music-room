@@ -1,6 +1,10 @@
 import { ALERT_POP } from '../actions/alert'
 
-export default alertReducer = (state = {} , action) => {
+export const initialState = {
+  message: ''
+}
+
+export default function AlertReducer (state = initialState, action = {}) {
   switch(action.type){
     case ALERT_POP:
       return { message: action.message }
