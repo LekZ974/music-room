@@ -5,7 +5,8 @@
     "eject": "expo eject",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "test": "jest"
+    "test": "jest",
+    "postinstall": "rndebugger-open --expo"
   },
   "jest": {
     "preset": "jest-expo"
@@ -28,6 +29,7 @@
     "babel-plugin-module-resolver": "^3.1.1",
     "babel-preset-expo": "^5.0.0",
     "jest-expo": "30.0.0",
+    "react-native-debugger-open": "^0.3.18",
     "redux-devtools": "^3.4.1",
     "redux-devtools-extension": "^2.13.8",
     "standard": "^11.0.1"
