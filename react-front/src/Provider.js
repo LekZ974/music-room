@@ -1,14 +1,18 @@
 import React from 'react';
 
 import { Provider } from 'react-redux';
-import store from './redux/store';
+import { PersistGate } from 'redux-persist/integration/react';
+import { AppLoading } from 'expo';
+import store, { persistor } from './redux/store';
 
 import Main from './Main';
 import { alert } from './redux/actions/alert';
 
 const WrapperProvider = () => (
   <Provider store={store}>
-    <Main />
+    <PersistGate loading={<AppLoading />} persistor={persistor}>
+      <Main />
+    </PersistGate>
   </Provider>
 );
 
