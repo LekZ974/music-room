@@ -10,4 +10,4 @@ const Main = () => (
     <Text>MUSIC ROOM!!!</Text>
   </StyleProvider>
 );
-export default Main();
+export default Main;

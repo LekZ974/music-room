@@ -10,4 +10,4 @@ const composeFn = __DEV__ ? composeWithDevTools : compose;
 
 const store = composeFn(applyMiddleware(...middlewares))(createStore)(reducer);
 
-export default { store };
+export default store;

@@ -7,8 +7,8 @@
     "ios": "expo start --ios",
     "test": "node ./node_modules/jest/bin/jest.js",
     "postinstall": "rndebugger-open --expo",
-    "lint": "eslint App.jsx src/",
-    "lint:fix": "eslint --fix App.jsx src/",
+    "lint": "eslint App.js src/",
+    "lint:fix": "eslint --fix App.js src/",
     "precommit": "lint-staged"
   },
   "lint-staged": {
