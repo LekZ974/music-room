@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Container } from 'native-base';
+import { Container, Content, Header } from '../../components';
 import LoginForm from './LoginForm';
 import { login } from '../../redux/actions/user';
 
@@ -11,7 +11,10 @@ const LoginPage = props => {
 
   return (
     <Container>
-      <LoginForm onSubmit={submit} {...props} />
+      <Header />
+      <Content>
+        <LoginForm onSubmit={submit} {...props} />
+      </Content>
     </Container>
   );
 };

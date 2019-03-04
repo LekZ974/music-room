@@ -1,12 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { Button, Container, Content } from 'native-base';
+import { Button, Container, Content, Header, Text } from '../../components';
 
 const NotConnected = ({ navigation }) => (
   <Container>
+    <Header />
     <Content>
-      <Button label="J'ai déjà un compte" onPress={() => navigation.navigate('LoginPage')} full />
+      <Button onPress={() => navigation.navigate('LoginPage')} full>
+        <Text>J&apos;ai déjà un compte</Text>
+      </Button>
     </Content>
   </Container>
 );

@@ -2,20 +2,10 @@ import React from 'react';
 import { compose, branch, renderComponent } from 'recompose';
 import { connect } from 'react-redux';
 
-import {
-  Container,
-  Header,
-  Title,
-  Content,
-  Footer,
-  FooterTab,
-  Button,
-  Left,
-  Right,
-  Body,
-  Icon,
-  Text,
-} from 'native-base';
+import { Footer, FooterTab, Left, Right, Body, Icon } from 'native-base';
+
+import { Container, Header, Title, Content, Button, Text } from '../../components';
+
 import NotConnected from './NotConnected';
 
 const Home = () => (
