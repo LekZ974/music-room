@@ -13,49 +13,49 @@ const theme = {
   },
   typography: {
     color: '#666666',
-    bold: 'SFProText-Bold',
-    semibold: 'SFProText-Semibold',
-    normal: 'SFProText-Medium',
-    light: 'SFProText-Light',
+    bold: 'Roboto-Bold',
+    semibold: 'Roboto-Medium',
+    normal: 'Roboto-Regular',
+    light: 'Roboto-Light',
     header1: {
       fontSize: 48,
       lineHeight: 58,
-      fontFamily: 'SFProText-Heavy'
+      fontFamily: 'Roboto-Black'
     },
     header2: {
       fontSize: 36,
       lineHeight: 43,
-      fontFamily: 'SFProText-Medium'
+      fontFamily: 'Roboto-Medium'
     },
     header3: {
       fontSize: 24,
       lineHeight: 28,
-      fontFamily: 'SFProText-Heavy'
+      fontFamily: 'Roboto-Black'
     },
     large: {
       fontSize: 16,
       lineHeight: 21,
-      fontFamily: 'SFProText-Heavy'
+      fontFamily: 'Roboto-Black'
     },
     regular: {
       fontSize: 17,
       lineHeight: 21,
-      fontFamily: 'SFProText-Medium'
+      fontFamily: 'Roboto-Medium'
     },
     bolder: {
       fontSize: 14,
       lineHeight: 21,
-      fontFamily: 'SFProText-Heavy'
+      fontFamily: 'Roboto-Black'
     },
     small: {
       fontSize: 14,
       lineHeight: 18,
-      fontFamily: 'SFProText-Regular'
+      fontFamily: 'Roboto-Regular'
     },
     micro: {
       fontSize: 8,
       lineHeight: 8,
-      fontFamily: 'SFProText-Bold'
+      fontFamily: 'Roboto-Bold'
     }
   },
   spacing: {
