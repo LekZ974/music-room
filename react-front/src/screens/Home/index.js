@@ -7,6 +7,7 @@ import { Footer, FooterTab, Left, Right, Body, Icon } from 'native-base';
 import { Container, Header, Title, Content, Button, Text } from '../../components';
 
 import NotConnected from './NotConnected';
+import I18n from '../../i18n';
 
 const Home = () => (
   <Container>
@@ -17,17 +18,17 @@ const Home = () => (
         </Button>
       </Left>
       <Body>
-        <Title>Music Room</Title>
+        <Title>{I18n.t('home.title')}</Title>
       </Body>
       <Right />
     </Header>
     <Content>
-      <Text>This is Content Section</Text>
+      <Text>{I18n.t('home.content')}</Text>
     </Content>
     <Footer>
       <FooterTab>
         <Button full>
-          <Text>Footer</Text>
+          <Text>{I18n.t('home.footer')}</Text>
         </Button>
       </FooterTab>
     </Footer>
