@@ -1,13 +1,41 @@
 import React from 'react';
-import { StyleProvider } from 'native-base';
-import { Text } from 'react-native';
 
-import getTheme from './native-base-theme/components';
-import variables from './native-base-theme/variables/commonColor';
+import { connect } from 'react-redux';
+import { Font, AppLoading } from 'expo';
+import { Ionicons } from '@expo/vector-icons';
+import { lifecycle } from 'recompose';
+import Routes from './routes';
 
-const Main = () => (
-  <StyleProvider style={getTheme(variables)}>
-    <Text>MUSIC ROOM!!!</Text>
-  </StyleProvider>
-);
-export default Main;
+const withStatus = lifecycle({
+  async componentDidMount() {
+    /* eslint-disable */
+    try {
+      await Font.loadAsync({
+        Roboto: require('native-base/Fonts/Roboto.ttf'),
+        Roboto_medium: require('native-base/Fonts/Roboto_medium.ttf'),
+        ...Ionicons.font,
+      });
+      this.setState({ ready: true });
+    } catch (error) {
+      console.log(error)
+    }
+    /* eslint-enable */
+  },
+});
+
+const Main = withStatus((status, props) => {
+  const { isLogged } = props;
+
+  return status.ready ? <Routes screenProps={{ isLogged }} /> : <AppLoading />;
+});
+
+const mapStateToProps = state => {
+  return {
+    isLogged: !!state.user.email,
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  null,
+)(Main);
