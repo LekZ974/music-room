@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<Text
+  numberOfLines={1}
+  style={
+    Object {
+      "color": "#000",
+      "fontFamily": "System",
+      "fontSize": 17,
+      "fontWeight": "700",
+      "marginLeft": undefined,
+      "paddingLeft": 4,
+      "paddingTop": 1,
+      "textAlign": "center",
+    }
+  }
+>
+  Snapshot test with Title Component!
+</Text>
+`;

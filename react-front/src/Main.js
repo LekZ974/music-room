@@ -37,12 +37,10 @@ const withStatus = lifecycle({
   },
 });
 
-const Main = withStatus((status, props) => {
-  const { isLogged } = props;
-
+const Main = withStatus(status => {
   return (
     <StyleProvider style={getTheme(variables)}>
-      {status.ready ? <Routes screenProps={{ isLogged }} /> : <AppLoading />}
+      {status.ready ? <Routes screenProps={status} /> : <AppLoading />}
     </StyleProvider>
   );
 });

@@ -6,8 +6,8 @@ import { StyleSheet } from 'react-native';
 import { Container, Content, Title, Button } from '../../components';
 
 import I18n from '../../i18n';
-import { login } from '../../redux/actions/user';
-import LoginForm from './LoginForm';
+import { signUp } from '../../redux/actions/user';
+import SignUpForm from './SignUpForm';
 import AuthSocials from './AuthSocials';
 
 import { Theme } from '../../native-base-theme/default_theme';
@@ -24,20 +24,16 @@ const styles = StyleSheet.create({
   },
 });
 
-const LoginScreen = props => {
-  const { signIn, navigation } = props;
+const SignUpScreen = props => {
+  const { subscribe, navigation } = props;
 
-  const signInUser = data => {
-    signIn(data);
+  const signUpUser = data => {
+    subscribe(data);
     navigation.navigate('HomeScreen');
   };
 
-  const goToSignUp = () => {
-    navigation.navigate('SignUpScreen');
-  };
-
-  const goToForgotPassword = () => {
-    navigation.navigate('ForgotPassword');
+  const goToLogin = () => {
+    navigation.navigate('LoginScreen');
   };
 
   const goBack = () => {
@@ -48,35 +44,35 @@ const LoginScreen = props => {
     <Container style={styles.container}>
       <KeyboardAwareScrollView enableOnAndroid>
         <Content>
-          <Title>{I18n.t('login.title')}</Title>
-          <LoginForm onSubmit={signInUser} goToForgotPassword={goToForgotPassword} />
+          <Title>{I18n.t('signUp.title')}</Title>
+          <SignUpForm onSubmit={signUpUser} />
           <Button
             style={styles.button}
-            label={I18n.t('login.form.signUp')}
-            onPress={goToSignUp}
+            label={I18n.t('signUp.form.signIn')}
+            onPress={goToLogin}
             success
             full
           />
           <AuthSocials />
-          <Button label={I18n.t('login.form.cancel')} onPress={goBack} full light />
+          <Button label={I18n.t('signUp.form.cancel')} onPress={goBack} full light />
         </Content>
       </KeyboardAwareScrollView>
     </Container>
   );
 };
 
-LoginScreen.propTypes = {
+SignUpScreen.propTypes = {
   navigation: PropTypes.shape({
     navigate: PropTypes.func.isRequired,
   }).isRequired,
-  signIn: PropTypes.func.isRequired,
+  subscribe: PropTypes.func.isRequired,
 };
 
 const mapDispatchToProps = dispatch => ({
-  signIn: user => dispatch(login(user)),
+  subscribe: user => dispatch(signUp(user)),
 });
 
 export default connect(
   null,
   mapDispatchToProps,
-)(LoginScreen);
+)(SignUpScreen);

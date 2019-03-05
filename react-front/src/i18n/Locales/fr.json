@@ -1,0 +1,47 @@
+{
+  "home": {
+    "title": "Music Room"
+  },
+  "notConnected": {
+    "loginButton": "J'ai déjà un compte",
+    "signUpButton": "Créer mon compte"
+  },
+  "login": {
+    "title": "Login Screen",
+    "form": {
+      "signIn": "C'est parti!",
+      "signUp": "Je m'inscris!",
+      "forgot": "J'ai oublié mon mot de passe!",
+      "cancel": "Annuler",
+      "email": "Votre email",
+      "password": "Mot de passe"
+    },
+    "auth": {
+      "title": "Ou connectez-vous avec ...",
+      "facebook": "Facebook",
+      "google": "Google",
+      "twitter": "Twitter",
+      "deezer": "Deezer",
+      "github": "Github"
+    }
+  },
+  "signUp": {
+    "title": "SignUp Screen",
+    "form": {
+      "signIn": "J'ai déjà un compte!",
+      "signUp": "Je m'inscris!",
+      "cancel": "Annuler",
+      "email": "Votre email",
+      "password": "Mot de passe",
+      "passwordConfirmation": "Répetez votre mot de passe"
+    },
+    "auth": {
+      "title": "Ou connectez-vous avec ...",
+      "facebook": "Facebook",
+      "google": "Google",
+      "twitter": "Twitter",
+      "deezer": "Deezer",
+      "github": "Github"
+    }
+  }
+}

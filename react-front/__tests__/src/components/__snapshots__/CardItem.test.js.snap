@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#fff",
+      "borderRadius": 2,
+      "flexDirection": "row",
+      "paddingBottom": 10,
+      "paddingLeft": 15,
+      "paddingRight": 15,
+      "paddingTop": 10,
+    }
+  }
+>
+  Snapshot test with CardItem Component!
+</View>
+`;
