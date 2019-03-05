@@ -1,0 +1,17 @@
+{
+  "home": {
+    "title": "Music Room"
+  },
+  "notConnected": {
+    "loginButton": "j'ai déjà un compte"
+  },
+  "login": {
+    "title": "Login Page",
+    "form": {
+      "validate": "C'est parti!",
+      "cancel": "Annuler",
+      "email": "Votre email",
+      "password": "Mot de passe",
+    }
+  },
+}
