@@ -8,14 +8,13 @@ import I18n from '../../i18n';
 import { Theme } from '../../native-base-theme/default_theme';
 
 const styles = StyleSheet.create({
-  forgotButton: Theme.typography.small,
   button: {
     marginTop: Theme.spacing.small,
   },
 });
 
-let LoginForm = props => {
-  const { handleSubmit, onSubmit, goToForgotPassword } = props;
+let SignUpForm = props => {
+  const { handleSubmit, onSubmit } = props;
 
   return (
     <View>
@@ -24,39 +23,37 @@ let LoginForm = props => {
         autoCapitalize="none"
         name="email"
         autoCorrect={false}
-        placeholder={I18n.t('login.form.email')}
+        placeholder={I18n.t('signUp.form.email')}
         component={TextInput}
       />
       <Field
         secureTextEntry
         name="password"
-        placeholder={I18n.t('login.form.password')}
+        placeholder={I18n.t('signUp.form.password')}
+        component={TextInput}
+      />
+      <Field
+        secureTextEntry
+        name="passwordConfirmation"
+        placeholder={I18n.t('signUp.form.passwordConfirmation')}
         component={TextInput}
       />
       <Button
         style={styles.button}
-        label={I18n.t('login.form.signIn')}
+        label={I18n.t('signUp.form.signUp')}
         onPress={handleSubmit(onSubmit)}
         full
         primary
-      />
-      <Button
-        style={[styles.forgotButton, styles.button]}
-        label={I18n.t('login.form.forgot')}
-        onPress={goToForgotPassword}
-        full
-        light
       />
     </View>
   );
 };
 
-LoginForm.propTypes = {
+SignUpForm.propTypes = {
   handleSubmit: PropTypes.func.isRequired,
   onSubmit: PropTypes.func.isRequired,
-  goToForgotPassword: PropTypes.func.isRequired,
 };
 
-export default (LoginForm = reduxForm({
-  form: 'login',
-})(LoginForm));
+export default (SignUpForm = reduxForm({
+  form: 'signUp',
+})(SignUpForm));

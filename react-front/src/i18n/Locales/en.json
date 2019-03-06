@@ -1,0 +1,27 @@
+{
+  "home": {
+    "title": "Music Room"
+  },
+  "notConnected": {
+    "loginButton": "I have an account"
+  },
+  "login": {
+    "title": "Login Screen",
+    "form": {
+      "signIn": "Lets go!",
+      "signUp": "I subscribe!",
+      "forgot": "I forgot my password!",
+      "cancel": "Cancel",
+      "email": "Your email",
+      "password": "Your password",
+    },
+    "auth": {
+      "title": "Or connect with ...",
+      "facebook": "Facebook",
+      "google": "Google",
+      "twitter": "Twitter",
+      "deezer": "Deezer",
+      "github": "Github",
+    }
+  },
+}

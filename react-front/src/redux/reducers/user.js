@@ -1,4 +1,4 @@
-import { USER_LOGIN } from '../actions/user';
+import { USER_LOGIN, USER_SIGNUP } from '../actions/user';
 
 const initialState = {
   id: '',
@@ -10,6 +10,12 @@ const initialState = {
 export default function UserReducer(state = initialState, action = {}) {
   switch (action.type) {
     case USER_LOGIN: {
+      return {
+        ...state,
+        ...action.user,
+      };
+    }
+    case USER_SIGNUP: {
       return {
         ...state,
         ...action.user,
