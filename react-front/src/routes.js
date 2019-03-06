@@ -7,6 +7,7 @@ import {
 import { Feather as Icon } from '@expo/vector-icons';
 
 import PropTypes from 'prop-types';
+import I18n from './i18n';
 
 import AccountScreen from './screens/Account';
 import HomeScreen from './screens/Home';
@@ -35,14 +36,14 @@ const HomeStack = createBottomTabNavigator(
       screen: HomeScreen,
       navigationOptions: ({ screenProps }) => ({
         tabBarVisible: !!screenProps.isLogged,
-        tabBarLabel: 'Home',
+        tabBarLabel: I18n.t('tabBar.home'),
         tabBarIcon: HomeScreenNavIcon,
       }),
     },
-    Profile: {
+    Account: {
       screen: AccountScreen,
       navigationOptions: {
-        tabBarLabel: 'Profile',
+        tabBarLabel: I18n.t('tabBar.account'),
         tabBarIcon: ProfileNavIcon,
       },
     },

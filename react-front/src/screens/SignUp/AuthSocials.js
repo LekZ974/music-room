@@ -2,7 +2,8 @@ import React from 'react';
 
 import { StyleSheet } from 'react-native';
 import { lifecycle } from 'recompose';
-import { View, Button, ActivityIndicator, Text } from '../../components';
+import { Right, Icon } from 'native-base';
+import { Content, ActivityIndicator, Text, CardItem, Card } from '../../components';
 import I18n from '../../i18n';
 
 import { Theme } from '../../native-base-theme/default_theme';
@@ -29,7 +30,15 @@ const styles = StyleSheet.create({
   },
   title: {
     ...Theme.typography.large,
-    margin: Theme.spacing.tiny,
+    margin: Theme.spacing.small,
+  },
+  cardItem: {
+    paddingTop: 0.5 * Theme.spacing.tiny,
+    paddingBottom: 0.5 * Theme.spacing.tiny,
+    backgroundColor: Theme.palette.secondary,
+  },
+  text: {
+    ...Theme.typography.small,
   },
 });
 
@@ -45,50 +54,71 @@ const AuthSocials = withStatus(status => {
   }
 
   return (
-    <View style={styles.container}>
+    <Content>
       <Text style={styles.title}>{I18n.t('login.auth.title')}</Text>
-      <View>
-        <Button
-          label={I18n.t('login.auth.deezer')}
-          style={styles.button}
-          iconName="spotify"
-          iconType="FontAwesome"
-          full
-        />
-      </View>
-      <View style={styles.view}>
-        <Button
-          label={I18n.t('login.auth.facebook')}
-          style={styles.button}
-          iconName="facebook"
-          iconType="FontAwesome"
-          full
-        />
-        <Button
-          label={I18n.t('login.auth.google')}
-          style={styles.button}
-          iconName="google"
-          iconType="FontAwesome"
-          full
-        />
-      </View>
-      <View style={styles.view}>
-        <Button
-          label={I18n.t('login.auth.twitter')}
-          style={styles.button}
-          iconName="twitter"
-          iconType="FontAwesome"
-          full
-        />
-        <Button
-          label={I18n.t('login.auth.github')}
-          style={styles.button}
-          iconName="github"
-          iconType="FontAwesome"
-          full
-        />
-      </View>
-    </View>
+      <Card>
+        <CardItem
+          style={styles.cardItem}
+          bordered
+          button
+          onPress={() => alert('Here a modal to Connect Facebook')}
+        >
+          <Icon active name="logo-facebook" />
+          <Text style={styles.text}>{I18n.t('login.auth.facebook')}</Text>
+          <Right>
+            <Icon name="arrow-forward" />
+          </Right>
+        </CardItem>
+        <CardItem
+          style={styles.cardItem}
+          bordered
+          button
+          onPress={() => alert('Here a modal to Connect Google')}
+        >
+          <Icon active name="logo-googleplus" />
+          <Text style={styles.text}>{I18n.t('login.auth.google')}</Text>
+          <Right>
+            <Icon name="arrow-forward" />
+          </Right>
+        </CardItem>
+        <CardItem
+          style={styles.cardItem}
+          bordered
+          button
+          onPress={() => alert('Here a modal to Connect Twitter')}
+        >
+          <Icon active name="logo-twitter" />
+          <Text style={styles.text}>{I18n.t('login.auth.twitter')}</Text>
+          <Right>
+            <Icon name="arrow-forward" />
+          </Right>
+        </CardItem>
+        <CardItem
+          style={styles.cardItem}
+          bordered
+          button
+          onPress={() => alert('Here a modal to Connect Github')}
+        >
+          <Icon active name="logo-github" />
+          <Text style={styles.text}>{I18n.t('login.auth.github')}</Text>
+          <Right>
+            <Icon name="arrow-forward" />
+          </Right>
+        </CardItem>
+        <CardItem
+          style={styles.cardItem}
+          bordered
+          button
+          onPress={() => alert('Here a modal to Connect Deezer')}
+        >
+          <Icon active type="FontAwesome" name="spotify" />
+          <Text style={styles.text}>{I18n.t('login.auth.deezer')}</Text>
+          <Right>
+            <Icon name="arrow-forward" />
+          </Right>
+        </CardItem>
+      </Card>
+    </Content>
   );
 });
 
