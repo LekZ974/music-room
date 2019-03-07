@@ -6,6 +6,10 @@
     "loginButton": "J'ai déjà un compte",
     "signUpButton": "Créer mon compte"
   },
+  "account": {
+    "title": "Mon compte",
+    "logout": "Déconnexion"
+  },
   "login": {
     "title": "Login Screen",
     "form": {
@@ -43,5 +47,9 @@
       "deezer": "Deezer",
       "github": "Github"
     }
+  },
+  "tabBar": {
+    "home": "Acceuil",
+    "account": "Mon compte"
   }
 }

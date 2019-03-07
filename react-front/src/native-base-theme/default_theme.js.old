@@ -1,9 +1,9 @@
 
 const theme = {
   palette: {
-    primary: '#5271ff',
+    primary: '#00AAFF',
     info: '#1abc9c',
-    secondary: '#ff914d',
+    secondary: '#f7555c',
     success: '#2ecc71',
     danger: '#c0392b',
     warning: '#e67e22',

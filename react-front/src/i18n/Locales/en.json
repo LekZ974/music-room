@@ -5,6 +5,10 @@
   "notConnected": {
     "loginButton": "I have an account"
   },
+  "account": {
+    "title": "My profile",
+    "logout": "Logout"
+  },
   "login": {
     "title": "Login Screen",
     "form": {
@@ -24,4 +28,8 @@
       "github": "Github",
     }
   },
+  "tabBar": {
+    "home": "Home",
+    "account": "Profile"
+  }
 }
