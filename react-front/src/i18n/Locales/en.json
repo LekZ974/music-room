@@ -1,6 +1,7 @@
 {
   "home": {
-    "title": "Music Room"
+    "title": "Music Room",
+    "content": "Soon here an amazing App!"
   },
   "notConnected": {
     "loginButton": "I have an account"

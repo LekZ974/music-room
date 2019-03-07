@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Alert } from 'react-native';
 import { lifecycle } from 'recompose';
 import { Right, Icon } from 'native-base';
 import { Content, ActivityIndicator, Text, CardItem, Card } from '../../components';
@@ -48,8 +48,10 @@ const withStatus = lifecycle({
   },
 });
 
-const AuthSocials = withStatus(status => {
-  if (!status.ready) {
+const AuthSocials = withStatus(props => {
+  const { ready, onSubmit } = props;
+
+  if (!ready) {
     return <ActivityIndicator animating />;
   }
 
@@ -61,7 +63,23 @@ const AuthSocials = withStatus(status => {
           style={styles.cardItem}
           bordered
           button
-          onPress={() => alert('Here a modal to Connect Facebook')}
+          onPress={() =>
+            Alert.alert(
+              'Facebook',
+              'Here a modal to Connect Facebook',
+              [
+                {
+                  text: 'Log me',
+                  onPress: () => onSubmit({ email: 'email-with-facebook@toto.com' }),
+                },
+                {
+                  text: 'Cancel',
+                  style: 'cancel',
+                },
+              ],
+              { cancelable: false },
+            )
+          }
         >
           <Icon active name="logo-facebook" />
           <Text style={styles.text}>{I18n.t('login.auth.facebook')}</Text>
@@ -73,7 +91,23 @@ const AuthSocials = withStatus(status => {
           style={styles.cardItem}
           bordered
           button
-          onPress={() => alert('Here a modal to Connect Google')}
+          onPress={() =>
+            Alert.alert(
+              'Google',
+              'Here a modal to Connect Google',
+              [
+                {
+                  text: 'Log me',
+                  onPress: () => onSubmit({ email: 'email-with-google@toto.com' }),
+                },
+                {
+                  text: 'Cancel',
+                  style: 'cancel',
+                },
+              ],
+              { cancelable: false },
+            )
+          }
         >
           <Icon active name="logo-googleplus" />
           <Text style={styles.text}>{I18n.t('login.auth.google')}</Text>
@@ -85,31 +119,23 @@ const AuthSocials = withStatus(status => {
           style={styles.cardItem}
           bordered
           button
-          onPress={() => alert('Here a modal to Connect Twitter')}
-        >
-          <Icon active name="logo-twitter" />
-          <Text style={styles.text}>{I18n.t('login.auth.twitter')}</Text>
-          <Right>
-            <Icon name="arrow-forward" />
-          </Right>
-        </CardItem>
-        <CardItem
-          style={styles.cardItem}
-          bordered
-          button
-          onPress={() => alert('Here a modal to Connect Github')}
-        >
-          <Icon active name="logo-github" />
-          <Text style={styles.text}>{I18n.t('login.auth.github')}</Text>
-          <Right>
-            <Icon name="arrow-forward" />
-          </Right>
-        </CardItem>
-        <CardItem
-          style={styles.cardItem}
-          bordered
-          button
-          onPress={() => alert('Here a modal to Connect Deezer')}
+          onPress={() =>
+            Alert.alert(
+              'Deezer',
+              'Here a modal to Connect Deezer',
+              [
+                {
+                  text: 'Log me',
+                  onPress: () => onSubmit({ email: 'email-with-deezer@toto.com' }),
+                },
+                {
+                  text: 'Cancel',
+                  style: 'cancel',
+                },
+              ],
+              { cancelable: false },
+            )
+          }
         >
           <Icon active type="FontAwesome" name="spotify" />
           <Text style={styles.text}>{I18n.t('login.auth.deezer')}</Text>
