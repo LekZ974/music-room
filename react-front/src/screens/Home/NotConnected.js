@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { StyleSheet } from 'react-native';
 import I18n from '../../i18n';
 
-import { Button, Container, View } from '../../components';
+import { Button, Container, Logo, View } from '../../components';
 
 import { Theme } from '../../native-base-theme/default_theme';
 
@@ -23,6 +23,7 @@ const styles = StyleSheet.create({
 const NotConnected = ({ navigation }) => (
   <Container style={styles.container}>
     <View>
+      <Logo />
       <Button
         label={I18n.t('notConnected.loginButton')}
         style={styles.button}

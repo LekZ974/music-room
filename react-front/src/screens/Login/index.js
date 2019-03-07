@@ -57,7 +57,7 @@ const LoginScreen = props => {
             success
             full
           />
-          <AuthSocials />
+          <AuthSocials onSubmit={signInUser} />
           <Button label={I18n.t('login.form.cancel')} onPress={goBack} full light />
         </Content>
       </KeyboardAwareScrollView>

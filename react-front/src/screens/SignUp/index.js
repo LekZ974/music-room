@@ -53,7 +53,7 @@ const SignUpScreen = props => {
             success
             full
           />
-          <AuthSocials />
+          <AuthSocials onSubmit={signUpUser} />
           <Button label={I18n.t('signUp.form.cancel')} onPress={goBack} full light />
         </Content>
       </KeyboardAwareScrollView>
