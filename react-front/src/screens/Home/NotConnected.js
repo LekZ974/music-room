@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
 
 const NotConnected = ({ navigation }) => (
   <Container style={styles.container}>
-    <View>
+    <View testID="homeNotConnected">
       <Logo />
       <Button
         label={I18n.t('notConnected.loginButton')}
