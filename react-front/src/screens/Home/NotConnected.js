@@ -9,19 +9,13 @@ import { Button, Container, Logo, View } from '../../components';
 import { Theme } from '../../native-base-theme/default_theme';
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
   button: {
     margin: Theme.spacing.small,
   },
 });
 
 const NotConnected = ({ navigation }) => (
-  <Container style={styles.container}>
+  <Container center>
     <View>
       <Logo />
       <Button

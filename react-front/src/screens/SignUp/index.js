@@ -41,7 +41,7 @@ const SignUpScreen = props => {
   };
 
   return (
-    <Container style={styles.container}>
+    <Container center>
       <KeyboardAwareScrollView enableOnAndroid>
         <Content>
           <Title>{I18n.t('signUp.title')}</Title>

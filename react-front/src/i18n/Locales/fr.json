@@ -30,6 +30,12 @@
       "github": "Github"
     }
   },
+  "resetPassword": {
+    "title": "Reset Password Screen",
+    "email": "Votre email",
+    "validate": "Je veux mon nouveaux mot de passe!",
+    "cancel": "Annuler"
+  },
   "signUp": {
     "title": "SignUp Screen",
     "form": {
