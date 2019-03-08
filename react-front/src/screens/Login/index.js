@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import { StyleSheet } from 'react-native';
-import { Container, Content, Title, Button } from '../../components';
+import { Container, Title, Button } from '../../components';
 
 import I18n from '../../i18n';
 import { login } from '../../redux/actions/user';
@@ -13,12 +13,6 @@ import AuthSocials from './AuthSocials';
 import { Theme } from '../../native-base-theme/default_theme';
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
   button: {
     marginTop: Theme.spacing.small,
   },
@@ -37,7 +31,7 @@ const LoginScreen = props => {
   };
 
   const goToForgotPassword = () => {
-    navigation.navigate('ForgotPassword');
+    navigation.navigate('ResetPasswordScreen');
   };
 
   const goBack = () => {
@@ -45,21 +39,19 @@ const LoginScreen = props => {
   };
 
   return (
-    <Container style={styles.container}>
+    <Container center>
       <KeyboardAwareScrollView enableOnAndroid>
-        <Content>
-          <Title>{I18n.t('login.title')}</Title>
-          <LoginForm onSubmit={signInUser} goToForgotPassword={goToForgotPassword} />
-          <Button
-            style={styles.button}
-            label={I18n.t('login.form.signUp')}
-            onPress={goToSignUp}
-            success
-            full
-          />
-          <AuthSocials onSubmit={signInUser} />
-          <Button label={I18n.t('login.form.cancel')} onPress={goBack} full light />
-        </Content>
+        <Title>{I18n.t('login.title')}</Title>
+        <LoginForm onSubmit={signInUser} goToForgotPassword={goToForgotPassword} />
+        <Button
+          style={styles.button}
+          label={I18n.t('login.form.signUp')}
+          onPress={goToSignUp}
+          success
+          full
+        />
+        <AuthSocials onSubmit={signInUser} />
+        <Button label={I18n.t('login.form.cancel')} onPress={goBack} full light />
       </KeyboardAwareScrollView>
     </Container>
   );

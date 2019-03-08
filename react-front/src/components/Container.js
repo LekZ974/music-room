@@ -1,12 +1,17 @@
 import React from 'react';
 
-import { SafeAreaView, StatusBar, Platform } from 'react-native';
-import { View } from 'native-base';
+import { SafeAreaView, StatusBar, Platform, View } from 'react-native';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import ActivityIndicator from './ActivityIndicator';
 
-const Container = ({ children, isLoading, grey, ...props }) => {
+const centerView = {
+  flexDirection: 'row',
+  alignItems: 'center',
+  justifyContent: 'center',
+};
+
+const Container = ({ children, isLoading, grey, center, ...props }) => {
   return (
     <SafeAreaView
       style={{
@@ -17,19 +22,30 @@ const Container = ({ children, isLoading, grey, ...props }) => {
       {...props}
     >
       <ActivityIndicator animating={isLoading} />
-      <View style={{ flex: 1, padding: 10 }}>{children}</View>
+      <View
+        style={{
+          flex: 1,
+          padding: 10,
+          backgroundColor: grey ? '#FAFAFA' : 'white',
+          ...(center && centerView),
+        }}
+      >
+        {children}
+      </View>
     </SafeAreaView>
   );
 };
 
 Container.defaultProps = {
   grey: false,
+  center: false,
 };
 
 Container.propTypes = {
   children: PropTypes.node.isRequired,
   isLoading: PropTypes.bool.isRequired,
   grey: PropTypes.bool,
+  center: PropTypes.bool,
 };
 
 export default connect(({ application }) => ({

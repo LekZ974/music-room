@@ -4,7 +4,8 @@
     "content": "Soon here an amazing App!"
   },
   "notConnected": {
-    "loginButton": "I have an account"
+    "loginButton": "I have an account",
+    "signUpButton": "Create an account"
   },
   "account": {
     "title": "My profile",
@@ -27,6 +28,31 @@
       "twitter": "Twitter",
       "deezer": "Deezer",
       "github": "Github",
+    }
+  },
+  "resetPassword": {
+    "title": "Reset Password Screen",
+    "email": "Your email",
+    "validate": "Send me a new password",
+    "cancel": "Cancel"
+  },
+  "signUp": {
+    "title": "SignUp Screen",
+    "form": {
+      "signIn": "I have already an account!",
+      "signUp": "I suscribe!",
+      "cancel": "Cancel",
+      "email": "Your email",
+      "password": "Your password",
+      "passwordConfirmation": "Repeat your password once again"
+    },
+    "auth": {
+      "title": "Or connect with ...",
+      "facebook": "Facebook",
+      "google": "Google",
+      "twitter": "Twitter",
+      "deezer": "Deezer",
+      "github": "Github"
     }
   },
   "tabBar": {

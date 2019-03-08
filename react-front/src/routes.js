@@ -12,6 +12,7 @@ import I18n from './i18n';
 import AccountScreen from './screens/Account';
 import HomeScreen from './screens/Home';
 import LoginScreen from './screens/Login';
+import ResetPasswordScreen from './screens/Login/ResetPassword';
 import SignUpScreen from './screens/SignUp';
 
 function HomeScreenNavIcon({ tintColor }) {
@@ -65,6 +66,7 @@ const MainStack = createStackNavigator(
   {
     HomeScreen: HomeStack,
     LoginScreen,
+    ResetPasswordScreen,
     SignUpScreen,
   },
   {
