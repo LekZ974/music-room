@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<RCTSafeAreaView
+  style={
+    Object {
+      "backgroundColor": "white",
+      "flex": 1,
+      "marginTop": 0,
+    }
+  }
+>
+  <Activity indicator
+    animating={false}
+  />
+  <View
+    style={
+      Object {
+        "backgroundColor": "white",
+        "flex": 1,
+        "padding": 10,
+      }
+    }
+  >
+    Snapshot test with CardItem Component!
+  </View>
+</RCTSafeAreaView>
+`;
+
+exports[`renders correctly with loading 1`] = `
+<RCTSafeAreaView
+  style={
+    Object {
+      "backgroundColor": "white",
+      "flex": 1,
+      "marginTop": 0,
+    }
+  }
+>
+  <Activity indicator
+    animating={true}
+  />
+  <View
+    style={
+      Object {
+        "backgroundColor": "white",
+        "flex": 1,
+        "padding": 10,
+      }
+    }
+  >
+    Snapshot test with CardItem Component!
+  </View>
+</RCTSafeAreaView>
+`;

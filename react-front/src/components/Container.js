@@ -11,7 +11,7 @@ const centerView = {
   justifyContent: 'center',
 };
 
-const Container = ({ children, isLoading, grey, center, ...props }) => {
+export const Container = ({ children, isLoading, grey, center, ...props }) => {
   return (
     <SafeAreaView
       style={{

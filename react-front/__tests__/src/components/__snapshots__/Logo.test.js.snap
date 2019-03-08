@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<View>
+  <Image
+    resizeMode="contain"
+    source={1}
+    style={
+      Object {
+        "height": 150,
+        "width": 150,
+      }
+    }
+  />
+</View>
+`;
