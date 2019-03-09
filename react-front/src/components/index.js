@@ -1,4 +1,5 @@
 export { default as ActivityIndicator } from './ActivityIndicator';
+export { default as AddButton } from './AddButton';
 export { default as Button } from './Button';
 export { default as Card } from './Card';
 export { default as CardItem } from './CardItem';

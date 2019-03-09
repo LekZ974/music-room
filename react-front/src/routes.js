@@ -9,6 +9,8 @@ import { Feather as Icon } from '@expo/vector-icons';
 import PropTypes from 'prop-types';
 import I18n from './i18n';
 
+import AddButton from './components/AddButton';
+
 import AccountScreen from './screens/Account';
 import HomeScreen from './screens/Home';
 import LoginScreen from './screens/Login';
@@ -60,7 +62,16 @@ const HomeStack = createBottomTabNavigator(
         tabBarIcon: HomeScreenNavIcon,
       }),
     },
-    Account: {
+    Add: {
+      screen: HomeScreen,
+      navigationOptions: ({ screenProps }) => ({
+        tabBarVisible: !!screenProps.isLogged,
+        tabBarLabel: I18n.t('tabBar.home'),
+        tabBarIcon: HomeScreenNavIcon,
+        tabBarButtonComponent: () => <AddButton />,
+      }),
+    },
+    AccountScreen: {
       screen: AccountScreen,
       navigationOptions: {
         tabBarLabel: I18n.t('tabBar.account'),
@@ -69,15 +80,23 @@ const HomeStack = createBottomTabNavigator(
     },
   },
   {
-    defaultNavigationOptions: {
-      headerStyle: {
-        backgroundColor: '#f4511e',
+    tabBarOptions: {
+      activeTintColor: 'rgb(255,255,255)', // color when tab is active
+      inactiveTintColor: 'rgb(89, 102, 139)',
+      style: {
+        backgroundColor: 'rgb(21, 31, 53)',
       },
-      headerTintColor: '#fff',
-      headerTitleStyle: {
-        fontWeight: 'bold',
-      },
+      showLabel: false, // turn off tab labels
     },
+    // defaultNavigationOptions: {
+    //   headerStyle: {
+    //     backgroundColor: '#f4511e',
+    //   },
+    //   headerTintColor: '#fff',
+    //   headerTitleStyle: {
+    //     fontWeight: 'bold',
+    //   },
+    // },
   },
 );
 
