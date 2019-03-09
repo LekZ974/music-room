@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { connect } from 'react-redux';
-import { Font, AppLoading } from 'expo';
+import { Asset, Font, AppLoading } from 'expo';
 import { Ionicons } from '@expo/vector-icons';
 import { lifecycle } from 'recompose';
 import { StyleProvider } from 'native-base';
@@ -16,19 +16,38 @@ const RobotoMedium = require('../assets/fonts/Roboto-Medium.ttf');
 const RobotoRegular = require('../assets/fonts/Roboto-Regular.ttf');
 const RobotoLight = require('../assets/fonts/Roboto-Light.ttf');
 
+/* eslint-disable */
+const _loadResourcesAsync = async () => {
+  return Promise.all([
+    Asset.loadAsync([
+      require('../assets/logo.png'),
+      require('../assets/logo-title.png'),
+      require('../assets/icon.png'),
+    ]),
+    Font.loadAsync({
+      'Roboto-Medium': RobotoMedium,
+      'Roboto-Black': RobotoBlack,
+      'Roboto-Bold': RobotoBold,
+      'Roboto-Thin': RobotoThin,
+      'Roboto-Regular': RobotoRegular,
+      'Roboto-Light': RobotoLight,
+      ...Ionicons.font,
+    })
+  ]);
+};
+
+const _handleLoadingError = error => {
+  console.log(error);
+}
+
+const _handleFinishLoading = () => {
+  console.log('App is load and ready');
+}
+
 const withStatus = lifecycle({
   async componentDidMount() {
-    /* eslint-disable */
     try {
-      await Font.loadAsync({
-        'Roboto-Medium': RobotoMedium,
-        'Roboto-Black': RobotoBlack,
-        'Roboto-Bold': RobotoBold,
-        'Roboto-Thin': RobotoThin,
-        'Roboto-Regular': RobotoRegular,
-        'Roboto-Light': RobotoLight,
-        ...Ionicons.font,
-      });
+      await _loadResourcesAsync()
       this.setState({ ready: true });
     } catch (error) {
       console.log(error)
@@ -40,7 +59,15 @@ const withStatus = lifecycle({
 const Main = withStatus(status => {
   return (
     <StyleProvider style={getTheme(variables)}>
-      {status.ready ? <Routes screenProps={status} /> : <AppLoading />}
+      {status.ready || status.skipLoadingScreen ? (
+        <Routes screenProps={status} />
+      ) : (
+        <AppLoading
+          startAsync={_loadResourcesAsync}
+          onError={_handleLoadingError}
+          onFinish={_handleFinishLoading}
+        />
+      )}
     </StyleProvider>
   );
 });

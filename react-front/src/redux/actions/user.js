@@ -13,9 +13,14 @@ export const signUp = user => ({
   user,
 });
 
-export const logout = user => ({
+export const logout = data => ({
   type: USER_LOGOUT,
-  user,
+  data,
+});
+
+export const resetPassword = email => ({
+  type: USER_RESET_PASSWORD,
+  email,
 });
 
 export const resetPassword = email => ({
