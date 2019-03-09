@@ -22,8 +22,3 @@ export const resetPassword = email => ({
   type: USER_RESET_PASSWORD,
   email,
 });
-
-export const resetPassword = email => ({
-  type: USER_RESET_PASSWORD,
-  email,
-});

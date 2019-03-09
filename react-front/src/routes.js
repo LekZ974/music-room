@@ -15,6 +15,25 @@ import LoginScreen from './screens/Login';
 import ResetPasswordScreen from './screens/Login/ResetPassword';
 import SignUpScreen from './screens/SignUp';
 
+const FadeTransition = props => {
+  const { position, scene } = props;
+
+  const { index } = scene;
+
+  const translateX = 0;
+  const translateY = 0;
+
+  const opacity = position.interpolate({
+    inputRange: [index - 0.7, index, index + 0.7],
+    outputRange: [0.3, 1, 0.3],
+  });
+
+  return {
+    opacity,
+    transform: [{ translateX }, { translateY }],
+  };
+};
+
 function HomeScreenNavIcon({ tintColor }) {
   return <Icon name="home" size={22} color={tintColor} />;
 }
@@ -70,6 +89,11 @@ const MainStack = createStackNavigator(
     SignUpScreen,
   },
   {
+    transitionConfig: () => ({
+      screenInterpolator: props => {
+        return FadeTransition(props);
+      },
+    }),
     initialRouteName: 'HomeScreen',
     headerMode: 'none',
   },
