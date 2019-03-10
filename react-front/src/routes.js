@@ -1,9 +1,9 @@
 import React from 'react';
-import { Platform } from 'react-native';
 import {
   createStackNavigator,
   createBottomTabNavigator,
   createAppContainer,
+  createMaterialTopTabNavigator,
 } from 'react-navigation';
 import { Feather as Icon } from '@expo/vector-icons';
 
@@ -12,15 +12,15 @@ import I18n from './i18n';
 
 import { Theme } from './native-base-theme/default_theme';
 
-import AddButtonIos from './components/AddButtonForIos';
-import AddButtonAndroid from './components/AddButtonForAndroid';
+import AddButton from './components/AddButton';
 
 import AccountScreen from './screens/Account';
 import HomeScreen from './screens/Home';
 import LoginScreen from './screens/Login';
 import ResetPasswordScreen from './screens/Login/ResetPassword';
 import SignUpScreen from './screens/SignUp';
-import CreateRoomScreen from './screens/CreateRoom';
+import MusicTrackVoteScreen from './screens/CreateRoom/MusicTrackVote';
+import PlayListEditorScreen from './screens/CreateRoom/PlayListEditor';
 
 const FadeTransition = props => {
   const { position, scene } = props;
@@ -57,84 +57,68 @@ ProfileNavIcon.propTypes = {
   tintColor: PropTypes.string.isRequired,
 };
 
-const HomeStack = Platform.select({
-  ios: createBottomTabNavigator(
-    {
-      HomeScreen: {
-        screen: HomeScreen,
-        navigationOptions: ({ screenProps }) => ({
-          tabBarVisible: !!screenProps.isLogged,
-          tabBarLabel: I18n.t('tabBar.home'),
-          tabBarIcon: HomeScreenNavIcon,
-        }),
-      },
-      Add: {
-        screen: HomeScreen,
-        navigationOptions: ({ screenProps }) => ({
-          tabBarVisible: !!screenProps.isLogged,
-          tabBarLabel: I18n.t('tabBar.home'),
-          tabBarIcon: HomeScreenNavIcon,
-          tabBarButtonComponent: () => <AddButtonIos />,
-        }),
-      },
-      AccountScreen: {
-        screen: AccountScreen,
-        navigationOptions: {
-          tabBarLabel: I18n.t('tabBar.account'),
-          tabBarIcon: ProfileNavIcon,
-        },
+const CreateRoomStack = createMaterialTopTabNavigator(
+  {
+    MusicTrackVote: {
+      screen: MusicTrackVoteScreen,
+    },
+    PlayListEditor: {
+      screen: PlayListEditorScreen,
+    },
+  },
+  {
+    headerMode: 'none',
+  },
+);
+
+const HomeStack = createBottomTabNavigator(
+  {
+    HomeScreen: {
+      screen: HomeScreen,
+      navigationOptions: ({ screenProps }) => ({
+        tabBarVisible: !!screenProps.isLogged,
+        tabBarLabel: I18n.t('tabBar.home'),
+        tabBarIcon: HomeScreenNavIcon,
+      }),
+    },
+    Add: {
+      screen: HomeScreen,
+      navigationOptions: ({ screenProps }) => ({
+        tabBarVisible: !!screenProps.isLogged,
+        tabBarLabel: I18n.t('tabBar.home'),
+        tabBarIcon: HomeScreenNavIcon,
+        tabBarButtonComponent: () => <AddButton />,
+      }),
+    },
+    AccountScreen: {
+      screen: AccountScreen,
+      navigationOptions: {
+        tabBarLabel: I18n.t('tabBar.account'),
+        tabBarIcon: ProfileNavIcon,
       },
     },
-    {
-      tabBarOptions: {
-        activeTintColor: Theme.palette.secondary,
-        inactiveTintColor: Theme.palette.borderColor,
-        style: {
-          backgroundColor: Theme.palette.primary,
-        },
-        showLabel: false,
+  },
+  {
+    tabBarOptions: {
+      activeTintColor: Theme.palette.secondary,
+      inactiveTintColor: Theme.palette.borderColor,
+      style: {
+        backgroundColor: Theme.palette.primary,
       },
+      showLabel: false,
     },
-  ),
-  android: createBottomTabNavigator(
-    {
-      HomeScreen: {
-        screen: HomeScreen,
-        navigationOptions: ({ screenProps }) => ({
-          tabBarVisible: !!screenProps.isLogged,
-          tabBarLabel: I18n.t('tabBar.home'),
-          tabBarIcon: HomeScreenNavIcon,
-        }),
+  },
+  {
+    tabBarOptions: {
+      activeTintColor: Theme.palette.secondary,
+      inactiveTintColor: Theme.palette.borderColor,
+      style: {
+        backgroundColor: Theme.palette.primary,
       },
-      Add: {
-        screen: HomeScreen,
-        navigationOptions: ({ screenProps }) => ({
-          tabBarVisible: !!screenProps.isLogged,
-          tabBarLabel: I18n.t('tabBar.home'),
-          tabBarIcon: HomeScreenNavIcon,
-          tabBarButtonComponent: () => <AddButtonAndroid />,
-        }),
-      },
-      AccountScreen: {
-        screen: AccountScreen,
-        navigationOptions: {
-          tabBarLabel: I18n.t('tabBar.account'),
-          tabBarIcon: ProfileNavIcon,
-        },
-      },
+      showLabel: false,
     },
-    {
-      tabBarOptions: {
-        activeTintColor: Theme.palette.secondary,
-        inactiveTintColor: Theme.palette.borderColor,
-        style: {
-          backgroundColor: Theme.palette.primary,
-        },
-        showLabel: false,
-      },
-    },
-  ),
-});
+  },
+);
 
 const MainStack = createStackNavigator(
   {
@@ -142,7 +126,7 @@ const MainStack = createStackNavigator(
     LoginScreen,
     ResetPasswordScreen,
     SignUpScreen,
-    CreateRoomScreen,
+    CreateRoomScreen: CreateRoomStack,
   },
   {
     transitionConfig: () => ({
@@ -151,6 +135,7 @@ const MainStack = createStackNavigator(
       },
     }),
     initialRouteName: 'HomeScreen',
+    headerMode: 'none',
   },
 );
 
