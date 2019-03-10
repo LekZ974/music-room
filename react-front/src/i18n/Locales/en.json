@@ -58,5 +58,9 @@
   "tabBar": {
     "home": "Home",
     "account": "Profile"
+  },
+  "createRoom": {
+    "title": "Create a new room",
+    "back": "Back"
   }
 }

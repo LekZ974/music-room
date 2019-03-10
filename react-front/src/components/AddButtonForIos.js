@@ -16,12 +16,12 @@ const center = {
 
 const topCenter = {
   top: -90,
-  left: 30,
+  left: 25,
 };
 
 const topLeft = {
   top: -60,
-  left: -40,
+  left: -45,
 };
 
 const topRight = {
@@ -30,8 +30,7 @@ const topRight = {
 };
 
 const bigBubbleSize = 100;
-const smallBubbleSize = 40;
-const bubbleColor = Theme.palette.primary;
+const smallBubbleSize = 50;
 
 const animateTime = 800;
 const easingType = Easing.out(Easing.exp);
@@ -42,7 +41,6 @@ const style = StyleSheet.create({
   bigBubble: {
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: bubbleColor,
     height: bigBubbleSize,
     width: bigBubbleSize,
     borderRadius: bigBubbleSize / 2,
@@ -51,7 +49,7 @@ const style = StyleSheet.create({
   smallBubble: {
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: bubbleColor,
+    backgroundColor: Theme.palette.secondary,
     height: smallBubbleSize,
     width: smallBubbleSize,
     borderRadius: smallBubbleSize / 2,
@@ -59,7 +57,7 @@ const style = StyleSheet.create({
 });
 
 /** class * */
-class AddButton extends Component {
+class AddButtonForIos extends Component {
   constructor(props) {
     super(props);
     this.animatedValue = new Animated.Value(0);
@@ -137,9 +135,10 @@ class AddButton extends Component {
 
   render() {
     const { navigation } = this.props;
+    const { pressed } = this.state;
 
     const goToCreateRoom = () => {
-      navigation.navigate('AccountScreen');
+      navigation.navigate('CreateRoomScreen');
     };
 
     const springValue = Animated.add(
@@ -153,6 +152,7 @@ class AddButton extends Component {
           style={[
             style.bigBubble,
             {
+              backgroundColor: pressed ? Theme.palette.secondary : Theme.palette.primary,
               transform: [
                 {
                   rotateZ: springValue.interpolate({
@@ -231,7 +231,9 @@ class AddButton extends Component {
             },
           ]}
         >
-          <FAwesomeIcon name="headphones" size={20} color="#FFF" />
+          <TouchableOpacity onPress={goToCreateRoom}>
+            <FAwesomeIcon name="headphones" size={20} color="#FFF" />
+          </TouchableOpacity>
         </Animated.View>
         <Animated.View
           style={[
@@ -303,17 +305,19 @@ class AddButton extends Component {
             },
           ]}
         >
-          <FAwesomeIcon name="music" size={20} color="#FFF" />
+          <TouchableOpacity onPress={goToCreateRoom}>
+            <FAwesomeIcon name="music" size={20} color="#FFF" />
+          </TouchableOpacity>
         </Animated.View>
       </View>
     );
   }
 }
 
-AddButton.propTypes = {
+AddButtonForIos.propTypes = {
   navigation: PropTypes.shape({
     navigate: PropTypes.func.isRequired,
   }).isRequired,
 };
 
-export default withNavigation(AddButton);
+export default withNavigation(AddButtonForIos);

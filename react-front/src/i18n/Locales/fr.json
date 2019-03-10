@@ -58,5 +58,9 @@
   "tabBar": {
     "home": "Acceuil",
     "account": "Mon compte"
+  },
+  "createRoom": {
+    "title": "Create a new room",
+    "back": "Retour"
   }
 }
