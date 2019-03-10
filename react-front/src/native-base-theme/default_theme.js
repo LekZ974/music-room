@@ -7,7 +7,7 @@ const theme = {
     success: '#2ecc71',
     danger: '#c0392b',
     warning: '#e67e22',
-    sidebar: '#484848',
+    sidebar: '#4d4848',
     lightGray: '#BFBFBF',
     borderColor: '#F5F5F5'
   },

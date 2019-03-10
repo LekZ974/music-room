@@ -61,6 +61,12 @@
   },
   "createRoom": {
     "title": "Create a new room",
-    "back": "Back"
+    "back": "Back",
+    "musicTrackVote": {
+      "title": "Music Track Vote"
+    },
+    "playListEditor": {
+      "title": "Play List Editor"
+    }
   }
 }

@@ -1,4 +1,6 @@
 import React from 'react';
+import { Platform } from 'react-native';
+
 import {
   createStackNavigator,
   createBottomTabNavigator,
@@ -12,7 +14,7 @@ import I18n from './i18n';
 
 import { Theme } from './native-base-theme/default_theme';
 
-import AddButton from './components/AddButton';
+import { AddButton, Logo } from './components';
 
 import AccountScreen from './screens/Account';
 import HomeScreen from './screens/Home';
@@ -21,6 +23,8 @@ import ResetPasswordScreen from './screens/Login/ResetPassword';
 import SignUpScreen from './screens/SignUp';
 import MusicTrackVoteScreen from './screens/CreateRoom/MusicTrackVote';
 import PlayListEditorScreen from './screens/CreateRoom/PlayListEditor';
+
+import MR_LOGO_TITLE from '../assets/logo-title.png';
 
 const FadeTransition = props => {
   const { position, scene } = props;
@@ -61,13 +65,21 @@ const CreateRoomStack = createMaterialTopTabNavigator(
   {
     MusicTrackVote: {
       screen: MusicTrackVoteScreen,
+      navigationOptions: () => ({
+        title: I18n.t('createRoom.musicTrackVote.title'),
+      }),
     },
     PlayListEditor: {
       screen: PlayListEditorScreen,
+      navigationOptions: () => ({
+        title: I18n.t('createRoom.playListEditor.title'),
+      }),
     },
   },
   {
-    headerMode: 'none',
+    navigationOptions: () => ({
+      headerTitle: I18n.t('createRoom.title'),
+    }),
   },
 );
 
@@ -99,16 +111,12 @@ const HomeStack = createBottomTabNavigator(
     },
   },
   {
-    tabBarOptions: {
-      activeTintColor: Theme.palette.secondary,
-      inactiveTintColor: Theme.palette.borderColor,
-      style: {
-        backgroundColor: Theme.palette.primary,
+    navigationOptions: () => ({
+      headerTitle: () => <Logo sm source={MR_LOGO_TITLE} />,
+      headerStyle: {
+        backgroundColor: Theme.palette.sidebar,
       },
-      showLabel: false,
-    },
-  },
-  {
+    }),
     tabBarOptions: {
       activeTintColor: Theme.palette.secondary,
       inactiveTintColor: Theme.palette.borderColor,
@@ -123,9 +131,24 @@ const HomeStack = createBottomTabNavigator(
 const MainStack = createStackNavigator(
   {
     HomeScreen: HomeStack,
-    LoginScreen,
-    ResetPasswordScreen,
-    SignUpScreen,
+    LoginScreen: {
+      screen: LoginScreen,
+      navigationOptions: () => ({
+        headerTitle: I18n.t('login.title'),
+      }),
+    },
+    ResetPasswordScreen: {
+      screen: ResetPasswordScreen,
+      navigationOptions: () => ({
+        headerTitle: I18n.t('resetPassword.title'),
+      }),
+    },
+    SignUpScreen: {
+      screen: SignUpScreen,
+      navigationOptions: () => ({
+        headerTitle: I18n.t('signUp.title'),
+      }),
+    },
     CreateRoomScreen: CreateRoomStack,
   },
   {
@@ -135,7 +158,8 @@ const MainStack = createStackNavigator(
       },
     }),
     initialRouteName: 'HomeScreen',
-    headerMode: 'none',
+    headerMode: Platform.OS === 'ios' ? 'float' : 'screen',
+    headerLayoutPreset: 'center',
   },
 );
 

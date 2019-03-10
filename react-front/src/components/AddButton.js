@@ -32,7 +32,7 @@ const topRight = {
 const bigBubbleSize = 100;
 const smallBubbleSize = 50;
 
-const animateTime = 800;
+const animateTime = 300;
 const easingType = Easing.out(Easing.exp);
 const delay = 200;
 

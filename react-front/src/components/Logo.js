@@ -12,6 +12,9 @@ const Logo = props => {
         style={{
           width: sm ? 50 : 150,
           height: sm ? 50 : 150,
+          alignSelf: 'center',
+          marginLeft: 'auto',
+          marginRight: 'auto',
         }}
         resizeMode="contain"
       />
