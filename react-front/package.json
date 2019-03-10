@@ -19,6 +19,7 @@
   "lint-staged": {
     "linters": {
       "**/*.js": [
+        "jest --findRelatedTests",
         "yarn lint:fix",
         "git add ."
       ]
