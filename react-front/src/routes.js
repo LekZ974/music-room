@@ -85,7 +85,7 @@ const CreateRoomStack = createMaterialTopTabNavigator(
 
 const HomeStack = createBottomTabNavigator(
   {
-    HomeScreen: {
+    Home: {
       screen: HomeScreen,
       navigationOptions: ({ screenProps }) => ({
         tabBarVisible: !!screenProps.isLogged,
@@ -102,7 +102,7 @@ const HomeStack = createBottomTabNavigator(
         tabBarButtonComponent: () => <AddButton />,
       }),
     },
-    AccountScreen: {
+    Account: {
       screen: AccountScreen,
       navigationOptions: {
         tabBarLabel: I18n.t('tabBar.account'),
@@ -130,26 +130,26 @@ const HomeStack = createBottomTabNavigator(
 
 const MainStack = createStackNavigator(
   {
-    HomeScreen: HomeStack,
-    LoginScreen: {
+    Home: HomeStack,
+    Login: {
       screen: LoginScreen,
       navigationOptions: () => ({
         headerTitle: I18n.t('login.title'),
       }),
     },
-    ResetPasswordScreen: {
+    ResetPassword: {
       screen: ResetPasswordScreen,
       navigationOptions: () => ({
         headerTitle: I18n.t('resetPassword.title'),
       }),
     },
-    SignUpScreen: {
+    SignUp: {
       screen: SignUpScreen,
       navigationOptions: () => ({
         headerTitle: I18n.t('signUp.title'),
       }),
     },
-    CreateRoomScreen: CreateRoomStack,
+    CreateRoom: CreateRoomStack,
   },
   {
     transitionConfig: () => ({

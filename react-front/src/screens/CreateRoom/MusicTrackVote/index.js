@@ -17,7 +17,7 @@ const MusicTrackVote = props => {
           <View>
             <Button
               label={I18n.t('createRoom.back')}
-              onPress={() => navigation.navigate('HomeScreen')}
+              onPress={() => navigation.navigate('Home')}
               full
             />
           </View>

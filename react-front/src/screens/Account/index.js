@@ -38,7 +38,7 @@ const Account = props => {
               onPress={() => {
                 persistor.purge();
                 signOut();
-                navigation.navigate('HomeScreen');
+                navigation.navigate('Home');
               }}
               full
               danger

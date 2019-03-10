@@ -21,13 +21,13 @@ const NotConnected = ({ navigation }) => (
       <Button
         label={I18n.t('notConnected.loginButton')}
         style={styles.button}
-        onPress={() => navigation.navigate('LoginScreen')}
+        onPress={() => navigation.navigate('Login')}
         full
       />
       <Button
         label={I18n.t('notConnected.signUpButton')}
         style={styles.button}
-        onPress={() => navigation.navigate('SignUpScreen')}
+        onPress={() => navigation.navigate('SignUp')}
         full
       />
     </View>

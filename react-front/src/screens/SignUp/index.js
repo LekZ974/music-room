@@ -29,11 +29,11 @@ const SignUpScreen = props => {
 
   const signUpUser = data => {
     subscribe(data);
-    navigation.navigate('HomeScreen');
+    navigation.navigate('Home');
   };
 
   const goToLogin = () => {
-    navigation.navigate('LoginScreen');
+    navigation.navigate('Login');
   };
 
   const goBack = () => {

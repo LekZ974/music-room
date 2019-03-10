@@ -23,15 +23,15 @@ const LoginScreen = props => {
 
   const signInUser = data => {
     signIn(data);
-    navigation.navigate('HomeScreen');
+    navigation.navigate('Home');
   };
 
   const goToSignUp = () => {
-    navigation.navigate('SignUpScreen');
+    navigation.navigate('SignUp');
   };
 
   const goToForgotPassword = () => {
-    navigation.navigate('ResetPasswordScreen');
+    navigation.navigate('ResetPassword');
   };
 
   const goBack = () => {
