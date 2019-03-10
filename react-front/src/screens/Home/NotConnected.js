@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
   },
 });
 
-const NotConnected = ({ navigation }) => (
+const NotConnectedScreen = ({ navigation }) => (
   <Container center>
     <View>
       <Logo />
@@ -34,10 +34,10 @@ const NotConnected = ({ navigation }) => (
   </Container>
 );
 
-NotConnected.propTypes = {
+NotConnectedScreen.propTypes = {
   navigation: PropTypes.shape({
     navigate: PropTypes.func.isRequired,
   }).isRequired,
 };
 
-export default NotConnected;
+export default NotConnectedScreen;

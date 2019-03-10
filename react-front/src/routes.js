@@ -157,7 +157,7 @@ const MainStack = createStackNavigator(
         return FadeTransition(props);
       },
     }),
-    initialRouteName: 'HomeScreen',
+    initialRouteName: 'Home',
     headerMode: Platform.OS === 'ios' ? 'float' : 'screen',
     headerLayoutPreset: 'center',
   },

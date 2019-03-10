@@ -6,7 +6,7 @@ import I18n from '../../../i18n';
 
 import { Container, Title, View, Button } from '../../../components';
 
-const PlayListEditor = props => {
+const PlayListEditorScreen = props => {
   const { navigation } = props;
 
   return (
@@ -27,10 +27,10 @@ const PlayListEditor = props => {
   );
 };
 
-PlayListEditor.propTypes = {
+PlayListEditorScreen.propTypes = {
   navigation: PropTypes.shape({
     navigate: PropTypes.func.isRequired,
   }).isRequired,
 };
 
-export default connect()(PlayListEditor);
+export default connect()(PlayListEditorScreen);

@@ -6,7 +6,7 @@ import I18n from '../../../i18n';
 
 import { Container, Title, View, Button } from '../../../components';
 
-const MusicTrackVote = props => {
+const MusicTrackVoteScreen = props => {
   const { navigation } = props;
 
   return (
@@ -27,10 +27,10 @@ const MusicTrackVote = props => {
   );
 };
 
-MusicTrackVote.propTypes = {
+MusicTrackVoteScreen.propTypes = {
   navigation: PropTypes.shape({
     navigate: PropTypes.func.isRequired,
   }).isRequired,
 };
 
-export default connect()(MusicTrackVote);
+export default connect()(MusicTrackVoteScreen);

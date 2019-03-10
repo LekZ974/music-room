@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
   },
 });
 
-const Account = props => {
+const AccountScreen = props => {
   const { navigation, signOut } = props;
 
   return (
@@ -50,7 +50,7 @@ const Account = props => {
   );
 };
 
-Account.propTypes = {
+AccountScreen.propTypes = {
   navigation: PropTypes.shape({
     navigate: PropTypes.func.isRequired,
   }).isRequired,
@@ -64,4 +64,4 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
   null,
   mapDispatchToProps,
-)(Account);
+)(AccountScreen);
