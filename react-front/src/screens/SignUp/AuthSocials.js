@@ -2,8 +2,8 @@ import React from 'react';
 
 import { StyleSheet, Alert } from 'react-native';
 import { lifecycle } from 'recompose';
-import { Right, Icon } from 'native-base';
-import { Content, ActivityIndicator, Text, CardItem, Card } from '../../components';
+import { Icon } from 'native-base';
+import { Content, ActivityIndicator, Text, CardItem, Card, View } from '../../components';
 import I18n from '../../i18n';
 
 import { Theme } from '../../native-base-theme/default_theme';
@@ -18,8 +18,7 @@ const styles = StyleSheet.create({
   },
   view: {
     flex: 1,
-    backgroundColor: '#fff',
-    flexDirection: 'row',
+    flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -30,12 +29,15 @@ const styles = StyleSheet.create({
   },
   title: {
     ...Theme.typography.large,
-    margin: Theme.spacing.small,
+    margin: Theme.spacing.tiny,
+  },
+  card: {
+    backgroundColor: Theme.palette.ligthPrimary,
+    shadowColor: 'transparent',
   },
   cardItem: {
     paddingTop: 0.5 * Theme.spacing.tiny,
-    paddingBottom: 0.5 * Theme.spacing.tiny,
-    backgroundColor: Theme.palette.secondary,
+    backgroundColor: Theme.palette.ligthPrimary,
   },
   text: {
     ...Theme.typography.small,
@@ -58,7 +60,7 @@ const AuthSocials = withStatus(props => {
   return (
     <Content>
       <Text style={styles.title}>{I18n.t('login.auth.title')}</Text>
-      <Card>
+      <Card style={styles.card}>
         <CardItem
           style={styles.cardItem}
           bordered
@@ -81,16 +83,15 @@ const AuthSocials = withStatus(props => {
             )
           }
         >
-          <Icon active name="logo-facebook" />
-          <Text style={styles.text}>{I18n.t('login.auth.facebook')}</Text>
-          <Right>
-            <Icon name="arrow-forward" />
-          </Right>
+          <View style={styles.view}>
+            <Icon active={false} name="logo-facebook" />
+            <Text style={styles.text}>{I18n.t('login.auth.facebook')}</Text>
+          </View>
         </CardItem>
         <CardItem
           style={styles.cardItem}
-          bordered
           button
+          bordered
           onPress={() =>
             Alert.alert(
               'Google',
@@ -109,16 +110,15 @@ const AuthSocials = withStatus(props => {
             )
           }
         >
-          <Icon active name="logo-googleplus" />
-          <Text style={styles.text}>{I18n.t('login.auth.google')}</Text>
-          <Right>
-            <Icon name="arrow-forward" />
-          </Right>
+          <View style={styles.view}>
+            <Icon active={false} name="logo-googleplus" />
+            <Text style={styles.text}>{I18n.t('login.auth.google')}</Text>
+          </View>
         </CardItem>
         <CardItem
           style={styles.cardItem}
-          bordered
           button
+          bordered
           onPress={() =>
             Alert.alert(
               'Deezer',
@@ -137,11 +137,10 @@ const AuthSocials = withStatus(props => {
             )
           }
         >
-          <Icon active type="FontAwesome" name="spotify" />
-          <Text style={styles.text}>{I18n.t('login.auth.deezer')}</Text>
-          <Right>
-            <Icon name="arrow-forward" />
-          </Right>
+          <View style={styles.view}>
+            <Icon active={false} type="FontAwesome" name="spotify" />
+            <Text style={styles.text}>{I18n.t('login.auth.deezer')}</Text>
+          </View>
         </CardItem>
       </Card>
     </Content>

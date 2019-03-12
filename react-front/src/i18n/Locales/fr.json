@@ -1,9 +1,16 @@
 {
   "home": {
     "title": "Music Room",
-    "content": "Bientot ici une super App!"
+    "content": "Bientot ici une super App!",
+    "manageUserRooms": {
+      "title": "Vos Rooms!"
+    },
+    "searchRooms": {
+      "title": "Rechercher une room"
+    }
   },
   "notConnected": {
+    "title": "Bienvenue",
     "loginButton": "J'ai déjà un compte",
     "signUpButton": "Créer mon compte"
   },

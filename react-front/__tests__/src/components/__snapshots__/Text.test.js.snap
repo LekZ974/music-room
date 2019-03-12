@@ -2,12 +2,18 @@
 
 exports[`renders correctly 1`] = `
 <Text
+  color="primary"
   style={
-    Object {
-      "color": "#000",
-      "fontFamily": "System",
-      "fontSize": 16,
-    }
+    Array [
+      Object {
+        "color": "#000",
+        "fontFamily": "System",
+        "fontSize": 16,
+      },
+      Object {
+        "color": "#212121",
+      },
+    ]
   }
   uppercase={false}
 >

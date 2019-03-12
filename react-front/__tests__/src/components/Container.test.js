@@ -5,6 +5,7 @@ import ConnectedContainer, { Container } from '../../../src/components/Container
 import toJson from 'enzyme-to-json';
 
 jest.mock('../../../src/components/ActivityIndicator', () => 'Activity indicator')
+jest.mock('react-native-gesture-handler', () => {});
 
 describe('>>>> CONTAINER - REACT-REDUX (Shallow + passing the {store} directly', () => {
   let wrapper;

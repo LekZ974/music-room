@@ -2,7 +2,7 @@ import React from 'react';
 
 import { connect } from 'react-redux';
 import { Asset, Font, AppLoading } from 'expo';
-import { Ionicons } from '@expo/vector-icons';
+import { Ionicons, FontAwesome, Feather } from '@expo/vector-icons';
 import { lifecycle } from 'recompose';
 import { StyleProvider } from 'native-base';
 import Routes from './routes';
@@ -32,6 +32,8 @@ const _loadResourcesAsync = async () => {
       'Roboto-Regular': RobotoRegular,
       'Roboto-Light': RobotoLight,
       ...Ionicons.font,
+      ...FontAwesome.font,
+      ...Feather.font,
     })
   ]);
 };

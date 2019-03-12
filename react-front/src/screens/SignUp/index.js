@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import { StyleSheet } from 'react-native';
-import { Container, Content, Title, Button } from '../../components';
+import { Container, View, Title, Button } from '../../components';
 
 import I18n from '../../i18n';
 import { signUp } from '../../redux/actions/user';
@@ -41,21 +41,20 @@ const SignUpScreen = props => {
   };
 
   return (
-    <Container center>
+    <Container center color="light">
       <KeyboardAwareScrollView enableOnAndroid>
-        <Content>
+        <View style={{ padding: 10 }}>
           <Title>{I18n.t('signUp.title')}</Title>
           <SignUpForm onSubmit={signUpUser} />
           <Button
-            style={styles.button}
+            style={[styles.button, { backgroundColor: Theme.palette.secondary }]}
             label={I18n.t('signUp.form.signIn')}
             onPress={goToLogin}
-            success
             full
           />
           <AuthSocials onSubmit={signUpUser} />
           <Button label={I18n.t('signUp.form.cancel')} onPress={goBack} full light />
-        </Content>
+        </View>
       </KeyboardAwareScrollView>
     </Container>
   );

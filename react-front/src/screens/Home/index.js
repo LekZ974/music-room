@@ -1,19 +1,21 @@
 import React from 'react';
-import { compose, branch, renderComponent } from 'recompose';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
-import { Container, Content, Text } from '../../components';
+const HomeScreen = props => {
+  const { isLogged, navigation } = props;
 
-import NotConnected from './NotConnected';
-import I18n from '../../i18n';
+  navigation.navigate(isLogged ? 'Main' : 'Auth');
 
-const HomeScreen = () => (
-  <Container>
-    <Content>
-      <Text>{I18n.t('home.content')}</Text>
-    </Content>
-  </Container>
-);
+  return <React.Fragment />;
+};
+
+HomeScreen.propTypes = {
+  navigation: PropTypes.shape({
+    navigate: PropTypes.func.isRequired,
+  }).isRequired,
+  isLogged: PropTypes.bool.isRequired,
+};
 
 const mapStateToProps = state => {
   return {
@@ -21,10 +23,7 @@ const mapStateToProps = state => {
   };
 };
 
-export default compose(
-  connect(
-    mapStateToProps,
-    null,
-  ),
-  branch(({ isLogged }) => !isLogged, renderComponent(NotConnected)),
+export default connect(
+  mapStateToProps,
+  null,
 )(HomeScreen);

@@ -1,9 +1,15 @@
 
 const theme = {
   palette: {
-    primary: '#5271ff',
+    darkPrimary: '#303F9F',
+    primary: '#3F51B5',
+    ligthPrimary: '#C5CAE9',
+    secondary: '#FF5722',
+    primaryText: '#212121',
+    secondaryText: '#757575',
+    textIcons: '#FFFFFF',
+    divider: '#BDBDBD',
     info: '#1abc9c',
-    secondary: '#ff914d',
     success: '#2ecc71',
     danger: '#c0392b',
     warning: '#e67e22',

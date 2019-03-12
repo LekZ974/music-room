@@ -32,7 +32,7 @@ const topRight = {
 const bigBubbleSize = 100;
 const smallBubbleSize = 50;
 
-const animateTime = 300;
+const animateTime = 800;
 const easingType = Easing.out(Easing.exp);
 const delay = 200;
 
@@ -156,7 +156,7 @@ class AddButton extends Component {
           style={[
             style.bigBubble,
             {
-              backgroundColor: pressed ? Theme.palette.secondary : Theme.palette.primary,
+              backgroundColor: pressed ? Theme.palette.secondary : Theme.palette.darkPrimary,
               transform: [
                 {
                   rotateZ: springValue.interpolate({

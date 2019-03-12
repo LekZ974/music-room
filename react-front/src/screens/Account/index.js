@@ -15,6 +15,11 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
+    backgroundColor: Theme.palette.ligthPrimary,
+    shadowColor: 'transparent',
+  },
+  cardItem: {
+    backgroundColor: Theme.palette.ligthPrimary,
   },
   button: {
     margin: Theme.spacing.small,
@@ -25,13 +30,13 @@ const AccountScreen = props => {
   const { navigation, signOut } = props;
 
   return (
-    <Container>
+    <Container color="light">
       <ScrollView contentContainerStyle={{ flex: 1 }}>
         <View>
           <Title>{I18n.t('account.title')}</Title>
         </View>
         <Card style={styles.card}>
-          <CardItem>
+          <CardItem style={styles.cardItem}>
             <Button
               style={styles.button}
               label={I18n.t('account.logout')}
