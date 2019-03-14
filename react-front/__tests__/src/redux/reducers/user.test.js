@@ -5,8 +5,7 @@ describe('user reducer', () => {
   it('should return the initial state', () => {
     expect(reducer(undefined, {})).toEqual({
       id: '',
-      firstName: '',
-      lastName: '',
+      name: '',
       email: '',
     })
   })
@@ -31,15 +30,14 @@ describe('user reducer', () => {
       reducer(
         {
           id: 'an Id',
-          firstName: 'John',
-          lastName: 'Jones',
+          name: 'John',
           email: 'an email',
         },
         {
           type: action.USER_LOGIN,
           user : {
             id: 'a new Id',
-            firstName: 'Connor',
+            name: 'Connor',
             lastName: 'McGregor',
             email: 'an other email'
           },
@@ -48,7 +46,7 @@ describe('user reducer', () => {
     ).toEqual(
       {
         id: 'a new Id',
-        firstName: 'Connor',
+        name: 'Connor',
         lastName: 'McGregor',
         email: 'an other email'
       },

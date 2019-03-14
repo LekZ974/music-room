@@ -6,6 +6,7 @@ import toJson from 'enzyme-to-json';
 
 jest.mock('../../../../src/i18n', () => {});
 jest.mock('react-native-gesture-handler', () => {});
+jest.mock('../../../../src/services/Auth.js', () => {});
 
 describe('>>>> SignUpScreen - REACT-REDUX (Shallow + passing the {store} directly', () => {
   let wrapper;

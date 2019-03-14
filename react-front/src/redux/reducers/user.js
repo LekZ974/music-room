@@ -2,8 +2,7 @@ import { USER_LOGIN, USER_SIGNUP } from '../actions/user';
 
 export const initialState = {
   id: '',
-  firstName: '',
-  lastName: '',
+  name: '',
   email: '',
 };
 

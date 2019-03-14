@@ -129,8 +129,7 @@ const ManageRoomStack = createMaterialTopTabNavigator(
   },
   {
     tabBarOptions: tabBarTopNavigationOptions,
-    navigationOptions: ({ screenProps }) => ({
-      tabBarVisible: !!screenProps.isLogged,
+    navigationOptions: () => ({
       tabBarLabel: I18n.t('tabBar.home'),
       tabBarIcon: ({ tintColor }) => IconHandler({ tintColor, name: 'home' }),
     }),
