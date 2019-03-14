@@ -1,13 +1,15 @@
 import React from 'react';
 
-import { Input as NBInput, Item } from 'native-base';
+import { Input as NBInput, Item, Label } from 'native-base';
 import PropTypes from 'prop-types';
+import { Theme } from '../native-base-theme/default_theme';
 
 export default function TextInput(props) {
-  const { input, ...inputProps } = props;
+  const { input, label, ...inputProps } = props;
 
   return (
-    <Item>
+    <Item fixedLabel>
+      <Label style={{ color: Theme.palette.secondaryText }}>{label}</Label>
       <NBInput
         {...inputProps}
         onChangeText={input.onChange}
@@ -26,4 +28,5 @@ TextInput.propTypes = {
     onFocus: PropTypes.func,
     value: PropTypes.string,
   }).isRequired,
+  label: PropTypes.string.isRequired,
 };

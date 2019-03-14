@@ -23,19 +23,19 @@ let SignUpForm = props => {
         autoCapitalize="none"
         name="email"
         autoCorrect={false}
-        placeholder={I18n.t('signUp.form.email')}
+        label={I18n.t('signUp.form.email')}
         component={TextInput}
       />
       <Field
         secureTextEntry
         name="password"
-        placeholder={I18n.t('signUp.form.password')}
+        label={I18n.t('signUp.form.password')}
         component={TextInput}
       />
       <Field
         secureTextEntry
         name="passwordConfirmation"
-        placeholder={I18n.t('signUp.form.passwordConfirmation')}
+        label={I18n.t('signUp.form.passwordConfirmation')}
         component={TextInput}
       />
       <Button

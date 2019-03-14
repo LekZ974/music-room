@@ -1,9 +1,16 @@
 {
   "home": {
     "title": "Music Room",
-    "content": "Bientot ici une super App!"
+    "content": "Bientot ici une super App!",
+    "manageUserRooms": {
+      "title": "Vos Rooms!"
+    },
+    "searchRooms": {
+      "title": "Rechercher une room"
+    }
   },
   "notConnected": {
+    "title": "Bienvenue",
     "loginButton": "J'ai déjà un compte",
     "signUpButton": "Créer mon compte"
   },
@@ -58,5 +65,15 @@
   "tabBar": {
     "home": "Acceuil",
     "account": "Mon compte"
+  },
+  "createRoom": {
+    "title": "Create a new room",
+    "back": "Retour",
+    "musicTrackVote": {
+      "title": "Music Track Vote"
+    },
+    "playListEditor": {
+      "title": "Play List Editor"
+    }
   }
 }

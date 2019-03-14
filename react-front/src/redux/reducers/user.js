@@ -1,6 +1,6 @@
 import { USER_LOGIN, USER_SIGNUP } from '../actions/user';
 
-const initialState = {
+export const initialState = {
   id: '',
   firstName: '',
   lastName: '',

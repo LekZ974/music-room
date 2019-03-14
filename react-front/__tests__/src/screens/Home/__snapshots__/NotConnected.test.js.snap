@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`>>>> NotConnected - REACT-REDUX (Shallow + passing the {store} directly Snapshot 1`] = `
+<Connect(Container)
+  center={true}
+>
+  <View>
+    <Logo
+      sm={false}
+      source={null}
+    />
+    <Button
+      full={true}
+      iconName={null}
+      iconType={null}
+      label={null}
+      onPress={[Function]}
+      style={
+        Object {
+          "margin": 16,
+        }
+      }
+    />
+    <Button
+      full={true}
+      iconName={null}
+      iconType={null}
+      label={null}
+      onPress={[Function]}
+      style={
+        Object {
+          "margin": 16,
+        }
+      }
+    />
+  </View>
+</Connect(Container)>
+`;

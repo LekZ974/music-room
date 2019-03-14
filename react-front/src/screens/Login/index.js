@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import { StyleSheet } from 'react-native';
-import { Container, Title, Button } from '../../components';
+import { Container, Title, Button, View } from '../../components';
 
 import I18n from '../../i18n';
 import { login } from '../../redux/actions/user';
@@ -23,15 +23,15 @@ const LoginScreen = props => {
 
   const signInUser = data => {
     signIn(data);
-    navigation.navigate('HomeScreen');
+    navigation.navigate('Home');
   };
 
   const goToSignUp = () => {
-    navigation.navigate('SignUpScreen');
+    navigation.navigate('SignUp');
   };
 
   const goToForgotPassword = () => {
-    navigation.navigate('ResetPasswordScreen');
+    navigation.navigate('ResetPassword');
   };
 
   const goBack = () => {
@@ -39,19 +39,20 @@ const LoginScreen = props => {
   };
 
   return (
-    <Container center>
+    <Container center color="light">
       <KeyboardAwareScrollView enableOnAndroid>
-        <Title>{I18n.t('login.title')}</Title>
-        <LoginForm onSubmit={signInUser} goToForgotPassword={goToForgotPassword} />
-        <Button
-          style={styles.button}
-          label={I18n.t('login.form.signUp')}
-          onPress={goToSignUp}
-          success
-          full
-        />
-        <AuthSocials onSubmit={signInUser} />
-        <Button label={I18n.t('login.form.cancel')} onPress={goBack} full light />
+        <View style={{ padding: 10 }}>
+          <Title>{I18n.t('login.title')}</Title>
+          <LoginForm onSubmit={signInUser} goToForgotPassword={goToForgotPassword} />
+          <Button
+            style={[styles.button, { backgroundColor: Theme.palette.secondary }]}
+            label={I18n.t('login.form.signUp')}
+            onPress={goToSignUp}
+            full
+          />
+          <AuthSocials onSubmit={signInUser} />
+          <Button label={I18n.t('login.form.cancel')} onPress={goBack} full light />
+        </View>
       </KeyboardAwareScrollView>
     </Container>
   );

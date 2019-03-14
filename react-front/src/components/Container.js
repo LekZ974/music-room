@@ -1,9 +1,11 @@
 import React from 'react';
 
-import { SafeAreaView, StatusBar, Platform, View } from 'react-native';
+import { LinearGradient } from 'expo';
+
+import { SafeAreaView, StatusBar, Platform } from 'react-native';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import ActivityIndicator from './ActivityIndicator';
+import { Theme } from '../native-base-theme/default_theme';
 
 const centerView = {
   flexDirection: 'row',
@@ -11,41 +13,69 @@ const centerView = {
   justifyContent: 'center',
 };
 
-const Container = ({ children, isLoading, grey, center, ...props }) => {
+const Container = ({ children, isLoading, color, center, linearGradient, ...props }) => {
+  let backgroundColor;
+
+  switch (color) {
+    case 'dark':
+      backgroundColor = Theme.palette.darkPrimary;
+      break;
+    case 'primary':
+      backgroundColor = Theme.palette.primary;
+      break;
+    case 'light':
+      backgroundColor = Theme.palette.ligthPrimary;
+      break;
+    case 'secondary':
+      backgroundColor = Theme.palette.secondary;
+      break;
+    case 'white':
+    default:
+      backgroundColor = Theme.palette.textIcons;
+      break;
+  }
+
   return (
     <SafeAreaView
       style={{
         flex: 1,
-        backgroundColor: grey ? '#FAFAFA' : 'white',
         marginTop: Platform.OS !== 'ios' ? StatusBar.currentHeight : 0,
+        backgroundColor,
+        padding: 10,
+        ...(center && centerView),
       }}
       {...props}
     >
-      <ActivityIndicator animating={isLoading} />
-      <View
-        style={{
-          flex: 1,
-          padding: 10,
-          backgroundColor: grey ? '#FAFAFA' : 'white',
-          ...(center && centerView),
-        }}
-      >
-        {children}
-      </View>
+      {linearGradient && (
+        <LinearGradient
+          colors={['rgba(0,0,0,0.8)', 'transparent']}
+          style={{
+            position: 'absolute',
+            left: 0,
+            right: 0,
+            top: 0,
+            height: 300,
+          }}
+        />
+      )}
+      {/* <ActivityIndicator animating={isLoading}/> */}
+      {children}
     </SafeAreaView>
   );
 };
 
 Container.defaultProps = {
-  grey: false,
+  color: 'ligth',
   center: false,
+  linearGradient: false,
 };
 
 Container.propTypes = {
   children: PropTypes.node.isRequired,
   isLoading: PropTypes.bool.isRequired,
-  grey: PropTypes.bool,
+  color: PropTypes.string,
   center: PropTypes.bool,
+  linearGradient: PropTypes.bool,
 };
 
 export default connect(({ application }) => ({

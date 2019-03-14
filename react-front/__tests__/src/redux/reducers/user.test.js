@@ -1,6 +1,5 @@
 import reducer from '../../../../src/redux/reducers/user'
 import * as action from '../../../../src/redux/actions/user'
-import { USER_SIGNUP } from '../../../../src/redux/actions/user'
 
 describe('user reducer', () => {
   it('should return the initial state', () => {

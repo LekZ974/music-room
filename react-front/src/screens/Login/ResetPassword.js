@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import { StyleSheet } from 'react-native';
 import { Field, reduxForm } from 'redux-form';
-import { Container, Content, Title, Button, TextInput } from '../../components';
+import { Container, View, Title, Button, TextInput } from '../../components';
 import { resetPassword } from '../../redux/actions/user';
 
 import I18n from '../../i18n';
@@ -14,6 +14,7 @@ import { Theme } from '../../native-base-theme/default_theme';
 const styles = StyleSheet.create({
   button: {
     marginTop: Theme.spacing.small,
+    backgroundColor: Theme.palette.secondary,
   },
 });
 
@@ -29,27 +30,26 @@ let ResetPassword = props => {
   };
 
   return (
-    <Container center>
+    <Container center color="light">
       <KeyboardAwareScrollView enableOnAndroid>
-        <Content>
+        <View style={{ padding: 10 }}>
           <Title>{I18n.t('resetPassword.title')}</Title>
           <Field
             keyboardType="email-address"
             autoCapitalize="none"
             name="email"
             autoCorrect={false}
-            placeholder={I18n.t('resetPassword.email')}
+            label={I18n.t('resetPassword.email')}
             component={TextInput}
           />
           <Button
             style={styles.button}
             label={I18n.t('resetPassword.validate')}
             onPress={handleSubmit(resetPwd)}
-            success
             full
           />
           <Button label={I18n.t('resetPassword.cancel')} onPress={goBack} full light />
-        </Content>
+        </View>
       </KeyboardAwareScrollView>
     </Container>
   );

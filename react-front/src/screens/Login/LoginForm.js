@@ -10,7 +10,7 @@ import { Theme } from '../../native-base-theme/default_theme';
 const styles = StyleSheet.create({
   forgotButton: Theme.typography.small,
   button: {
-    marginTop: Theme.spacing.small,
+    marginTop: Theme.spacing.tiny,
   },
 });
 
@@ -24,13 +24,13 @@ let LoginForm = props => {
         autoCapitalize="none"
         name="email"
         autoCorrect={false}
-        placeholder={I18n.t('login.form.email')}
+        label={I18n.t('login.form.email')}
         component={TextInput}
       />
       <Field
         secureTextEntry
         name="password"
-        placeholder={I18n.t('login.form.password')}
+        label={I18n.t('login.form.password')}
         component={TextInput}
       />
       <Button

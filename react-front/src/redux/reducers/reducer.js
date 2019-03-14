@@ -3,8 +3,8 @@ import { reducer as formReducer } from 'redux-form';
 
 import alert from './alert';
 import user from './user';
-import { USER_LOGOUT } from '../actions/user';
 import application from './application';
+import { USER_LOGOUT } from '../actions/user';
 
 const appReducer = combineReducers({
   user,

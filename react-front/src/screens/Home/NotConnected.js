@@ -14,30 +14,30 @@ const styles = StyleSheet.create({
   },
 });
 
-const NotConnected = ({ navigation }) => (
+const NotConnectedScreen = ({ navigation }) => (
   <Container center>
     <View>
       <Logo />
       <Button
         label={I18n.t('notConnected.loginButton')}
         style={styles.button}
-        onPress={() => navigation.navigate('LoginScreen')}
+        onPress={() => navigation.navigate('Login')}
         full
       />
       <Button
         label={I18n.t('notConnected.signUpButton')}
         style={styles.button}
-        onPress={() => navigation.navigate('SignUpScreen')}
+        onPress={() => navigation.navigate('SignUp')}
         full
       />
     </View>
   </Container>
 );
 
-NotConnected.propTypes = {
+NotConnectedScreen.propTypes = {
   navigation: PropTypes.shape({
     navigate: PropTypes.func.isRequired,
   }).isRequired,
 };
 
-export default NotConnected;
+export default NotConnectedScreen;

@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`>>>> MusicTrackVoteScreen - REACT-REDUX (Shallow + passing the {store} directly Snapshot 1`] = `
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
+`;

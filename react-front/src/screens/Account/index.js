@@ -15,30 +15,35 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
+    backgroundColor: Theme.palette.ligthPrimary,
+    shadowColor: 'transparent',
+  },
+  cardItem: {
+    backgroundColor: Theme.palette.ligthPrimary,
   },
   button: {
     margin: Theme.spacing.small,
   },
 });
 
-const Account = props => {
+const AccountScreen = props => {
   const { navigation, signOut } = props;
 
   return (
-    <Container>
+    <Container color="light">
       <ScrollView contentContainerStyle={{ flex: 1 }}>
         <View>
           <Title>{I18n.t('account.title')}</Title>
         </View>
         <Card style={styles.card}>
-          <CardItem>
+          <CardItem style={styles.cardItem}>
             <Button
               style={styles.button}
               label={I18n.t('account.logout')}
               onPress={() => {
                 persistor.purge();
                 signOut();
-                navigation.navigate('HomeScreen');
+                navigation.navigate('Home');
               }}
               full
               danger
@@ -50,7 +55,7 @@ const Account = props => {
   );
 };
 
-Account.propTypes = {
+AccountScreen.propTypes = {
   navigation: PropTypes.shape({
     navigate: PropTypes.func.isRequired,
   }).isRequired,
@@ -64,4 +69,4 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
   null,
   mapDispatchToProps,
-)(Account);
+)(AccountScreen);
