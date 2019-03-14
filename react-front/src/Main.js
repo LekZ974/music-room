@@ -5,6 +5,7 @@ import { Asset, Font, AppLoading } from 'expo';
 import { Ionicons, FontAwesome, Feather } from '@expo/vector-icons';
 import { lifecycle } from 'recompose';
 import { StyleProvider } from 'native-base';
+import { NativeModules, NativeEventEmitter } from 'react-native';
 import Routes from './routes';
 import getTheme from './native-base-theme/components';
 import variables from './native-base-theme/variables/commonColor';
@@ -59,6 +60,21 @@ const withStatus = lifecycle({
 });
 
 const Main = withStatus(status => {
+  const CounterEvents = new NativeEventEmitter(NativeModules.RNCounter);
+
+  CounterEvents.addListener('onIncrement', res => console.log('onIncrement event', res));
+
+  NativeModules.RNCounter.increment();
+  async function decrement() {
+    try {
+      const res = await NativeModules.RNCounter.decrement();
+      console.log(res);
+    } catch (e) {
+      console.log(e.message, e.code);
+    }
+  }
+  decrement();
+  decrement();
   return (
     <StyleProvider style={getTheme(variables)}>
       {status.ready || status.skipLoadingScreen ? (

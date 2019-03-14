@@ -5,7 +5,6 @@
 	};
 	objectVersion = 46;
 	objects = {
-
 /* Begin PBXBuildFile section */
 		B501732B1DC01252003445D9 /* EXShell.plist in Resources */ = {isa = PBXBuildFile; fileRef = B501732A1DC01252003445D9 /* EXShell.plist */; };
 		B56386491DB9693800A0598C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B56386481DB9693800A0598C /* AppDelegate.m */; };
@@ -18,7 +17,34 @@
 		B5CFBF4F1EDE419400B4BE24 /* EXBuildConstants.plist in Resources */ = {isa = PBXBuildFile; fileRef = B5CFBF4E1EDE419400B4BE24 /* EXBuildConstants.plist */; };
 		B5DB04801F3A684600E91581 /* shell-app-manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = B5DB047E1F3A684600E91581 /* shell-app-manifest.json */; };
 		B5DB04811F3A684600E91581 /* shell-app.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B5DB047F1F3A684600E91581 /* shell-app.bundle */; };
+		CDE4FC24223931A100531134 /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE4FC23223931A100531134 /* Counter.swift */; };
+		CDE4FC262239323000531134 /* Counter.m in Sources */ = {isa = PBXBuildFile; fileRef = CDE4FC252239323000531134 /* Counter.m */; };
+		CDE4FC4B2239524500531134 /* libDeezer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CDE4FC2A2239524500531134 /* libDeezer.a */; };
+		CDE4FC4C2239524500531134 /* DZRResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CDE4FC4A2239524500531134 /* DZRResources.bundle */; };
+		CDE4FC4E2239549400531134 /* MusicBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE4FC4D2239549400531134 /* MusicBar.swift */; };
+		CDE4FC50223956B600531134 /* DeezerSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE4FC4F223956B600531134 /* DeezerSession.swift */; };
+		CDE4FC5422398ECA00531134 /* MusicBarViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE4FC5322398EC900531134 /* MusicBarViewManager.swift */; };
+		CDE4FC5622398F1600531134 /* MusicBarViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CDE4FC5522398F1600531134 /* MusicBarViewManager.m */; };
+		CDE4FC5B2239907000531134 /* MusicBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE4FC5A2239907000531134 /* MusicBarView.swift */; };
 		EBB8117C1BFA0514F79CAF74 /* libPods-music-room.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C4A88D15726AD99E8A257BC7 /* libPods-music-room.a */; };
+		F81973B6525A4819B393EC2D /* AntDesign.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 806F06A91AF740CCB49D7532 /* AntDesign.ttf */; };
+		9509C3127E96463C8C20B791 /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B556869B96CF443393FE464D /* Entypo.ttf */; };
+		6418DE9CEA2E4C8BA5332B66 /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 258F7BEE86BE4175BA5FA988 /* EvilIcons.ttf */; };
+		64B61E743151495590A35F02 /* Feather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BEDF8488DCC44D14BA07E8D3 /* Feather.ttf */; };
+		CFEB252534F84ECEA493DBC8 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9648A5691039401597FD11AD /* FontAwesome.ttf */; };
+		EFF3986C51B24E6F943F71FE /* FontAwesome5_Brands.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C524B8511B54FD3AA9CF695 /* FontAwesome5_Brands.ttf */; };
+		C9D1D5E05FB1495CA08E650D /* FontAwesome5_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C452FF5A5EF64146A319E633 /* FontAwesome5_Regular.ttf */; };
+		43E01BD380E946B7A27F5066 /* FontAwesome5_Solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 008D80839E664F81A120CFB5 /* FontAwesome5_Solid.ttf */; };
+		E184B583717A4BD7B47B9CB9 /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5653E47DD05E4961A70FCA6A /* Foundation.ttf */; };
+		FD08378774354269BB84B149 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2C2AA06DA87B4431A583A0E5 /* Ionicons.ttf */; };
+		EC729182E38F4D50912CFF8B /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F259A03EC8F44AEA0545400 /* MaterialCommunityIcons.ttf */; };
+		6832A42E31694CE6AD2C14D0 /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 787050CA044F410DB68CE5BD /* MaterialIcons.ttf */; };
+		9ADC59E4E43447588E806E05 /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 090E864DE4E44DAFB0356659 /* Octicons.ttf */; };
+		777623CC18034C278EA28DE3 /* Roboto_medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32AF5B4A92974EED92CC7CFF /* Roboto_medium.ttf */; };
+		FA6C1B6A0B7E4D02B1A39075 /* Roboto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EC1FEF260CD341B3A19DBC36 /* Roboto.ttf */; };
+		4EB11A3533B644BB9E4B01DE /* rubicon-icon-font.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 188463AB8062446EA1F9E3BF /* rubicon-icon-font.ttf */; };
+		B15B38C69FF143AAB228B034 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A40EDCEFD2BF4EEA9A10763C /* SimpleLineIcons.ttf */; };
+		E94D86FE34CD4DF1A96C52D7 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 343F5B2329B845E69597B539 /* Zocial.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +65,64 @@
 		B5DB047E1F3A684600E91581 /* shell-app-manifest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "shell-app-manifest.json"; sourceTree = "<group>"; };
 		B5DB047F1F3A684600E91581 /* shell-app.bundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "shell-app.bundle"; sourceTree = "<group>"; };
 		C4A88D15726AD99E8A257BC7 /* libPods-music-room.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-music-room.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDE4FC222239319F00531134 /* music-room-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "music-room-Bridging-Header.h"; sourceTree = "<group>"; };
+		CDE4FC23223931A100531134 /* Counter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
+		CDE4FC252239323000531134 /* Counter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Counter.m; sourceTree = "<group>"; };
+		CDE4FC2A2239524500531134 /* libDeezer.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libDeezer.a; sourceTree = "<group>"; };
+		CDE4FC2C2239524500531134 /* DZRPlaylist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZRPlaylist.h; sourceTree = "<group>"; };
+		CDE4FC2D2239524500531134 /* Deezer+Compatibility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Deezer+Compatibility.h"; sourceTree = "<group>"; };
+		CDE4FC2E2239524500531134 /* DeezerConnect+Compatibility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DeezerConnect+Compatibility.h"; sourceTree = "<group>"; };
+		CDE4FC2F2239524500531134 /* DeezerRequestDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeezerRequestDelegate.h; sourceTree = "<group>"; };
+		CDE4FC302239524500531134 /* DZRPodcast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZRPodcast.h; sourceTree = "<group>"; };
+		CDE4FC312239524500531134 /* DZRArtist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZRArtist.h; sourceTree = "<group>"; };
+		CDE4FC322239524500531134 /* DZREpisode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZREpisode.h; sourceTree = "<group>"; };
+		CDE4FC332239524500531134 /* DZRPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZRPlayer.h; sourceTree = "<group>"; };
+		CDE4FC342239524500531134 /* NSBundle+DZRBundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+DZRBundle.h"; sourceTree = "<group>"; };
+		CDE4FC352239524500531134 /* DZRObject+Compatibility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DZRObject+Compatibility.h"; sourceTree = "<group>"; };
+		CDE4FC362239524500531134 /* DZRGenericCancelable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZRGenericCancelable.h; sourceTree = "<group>"; };
+		CDE4FC372239524500531134 /* DZRModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZRModel.h; sourceTree = "<group>"; };
+		CDE4FC382239524500531134 /* DZRCancelable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZRCancelable.h; sourceTree = "<group>"; };
+		CDE4FC392239524500531134 /* DZRObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZRObject.h; sourceTree = "<group>"; };
+		CDE4FC3A2239524500531134 /* DZRNetworkRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZRNetworkRequest.h; sourceTree = "<group>"; };
+		CDE4FC3B2239524500531134 /* DZRManagedRadio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZRManagedRadio.h; sourceTree = "<group>"; };
+		CDE4FC3C2239524500531134 /* NSError+DZRPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+DZRPlayer.h"; sourceTree = "<group>"; };
+		CDE4FC3D2239524500531134 /* DZRRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZRRequestManager.h; sourceTree = "<group>"; };
+		CDE4FC3E2239524500531134 /* DZRRadio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZRRadio.h; sourceTree = "<group>"; };
+		CDE4FC3F2239524500531134 /* DZRUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZRUser.h; sourceTree = "<group>"; };
+		CDE4FC402239524500531134 /* DZRTrack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZRTrack.h; sourceTree = "<group>"; };
+		CDE4FC412239524500531134 /* DZRFolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZRFolder.h; sourceTree = "<group>"; };
+		CDE4FC422239524500531134 /* DZRPlayableArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZRPlayableArray.h; sourceTree = "<group>"; };
+		CDE4FC432239524500531134 /* DZRComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZRComment.h; sourceTree = "<group>"; };
+		CDE4FC442239524500531134 /* DeezerConnect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeezerConnect.h; sourceTree = "<group>"; };
+		CDE4FC452239524500531134 /* DZRGenre.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZRGenre.h; sourceTree = "<group>"; };
+		CDE4FC462239524500531134 /* NSError+DZRModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+DZRModel.h"; sourceTree = "<group>"; };
+		CDE4FC472239524500531134 /* DZRAlbum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZRAlbum.h; sourceTree = "<group>"; };
+		CDE4FC482239524500531134 /* DZREditorial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZREditorial.h; sourceTree = "<group>"; };
+		CDE4FC492239524500531134 /* DZRObjectList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZRObjectList.h; sourceTree = "<group>"; };
+		CDE4FC4A2239524500531134 /* DZRResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = DZRResources.bundle; sourceTree = "<group>"; };
+		CDE4FC4D2239549400531134 /* MusicBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicBar.swift; sourceTree = "<group>"; };
+		CDE4FC4F223956B600531134 /* DeezerSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeezerSession.swift; sourceTree = "<group>"; };
+		CDE4FC5322398EC900531134 /* MusicBarViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicBarViewManager.swift; sourceTree = "<group>"; };
+		CDE4FC5522398F1600531134 /* MusicBarViewManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MusicBarViewManager.m; sourceTree = "<group>"; };
+		CDE4FC5A2239907000531134 /* MusicBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicBarView.swift; sourceTree = "<group>"; };
+		806F06A91AF740CCB49D7532 /* AntDesign.ttf */ = {isa = PBXFileReference; name = "AntDesign.ttf"; path = "../node_modules/native-base/Fonts/AntDesign.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B556869B96CF443393FE464D /* Entypo.ttf */ = {isa = PBXFileReference; name = "Entypo.ttf"; path = "../node_modules/native-base/Fonts/Entypo.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		258F7BEE86BE4175BA5FA988 /* EvilIcons.ttf */ = {isa = PBXFileReference; name = "EvilIcons.ttf"; path = "../node_modules/native-base/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		BEDF8488DCC44D14BA07E8D3 /* Feather.ttf */ = {isa = PBXFileReference; name = "Feather.ttf"; path = "../node_modules/native-base/Fonts/Feather.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		9648A5691039401597FD11AD /* FontAwesome.ttf */ = {isa = PBXFileReference; name = "FontAwesome.ttf"; path = "../node_modules/native-base/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		4C524B8511B54FD3AA9CF695 /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; name = "FontAwesome5_Brands.ttf"; path = "../node_modules/native-base/Fonts/FontAwesome5_Brands.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		C452FF5A5EF64146A319E633 /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; name = "FontAwesome5_Regular.ttf"; path = "../node_modules/native-base/Fonts/FontAwesome5_Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		008D80839E664F81A120CFB5 /* FontAwesome5_Solid.ttf */ = {isa = PBXFileReference; name = "FontAwesome5_Solid.ttf"; path = "../node_modules/native-base/Fonts/FontAwesome5_Solid.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		5653E47DD05E4961A70FCA6A /* Foundation.ttf */ = {isa = PBXFileReference; name = "Foundation.ttf"; path = "../node_modules/native-base/Fonts/Foundation.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		2C2AA06DA87B4431A583A0E5 /* Ionicons.ttf */ = {isa = PBXFileReference; name = "Ionicons.ttf"; path = "../node_modules/native-base/Fonts/Ionicons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		3F259A03EC8F44AEA0545400 /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; name = "MaterialCommunityIcons.ttf"; path = "../node_modules/native-base/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		787050CA044F410DB68CE5BD /* MaterialIcons.ttf */ = {isa = PBXFileReference; name = "MaterialIcons.ttf"; path = "../node_modules/native-base/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		090E864DE4E44DAFB0356659 /* Octicons.ttf */ = {isa = PBXFileReference; name = "Octicons.ttf"; path = "../node_modules/native-base/Fonts/Octicons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		32AF5B4A92974EED92CC7CFF /* Roboto_medium.ttf */ = {isa = PBXFileReference; name = "Roboto_medium.ttf"; path = "../node_modules/native-base/Fonts/Roboto_medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		EC1FEF260CD341B3A19DBC36 /* Roboto.ttf */ = {isa = PBXFileReference; name = "Roboto.ttf"; path = "../node_modules/native-base/Fonts/Roboto.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		188463AB8062446EA1F9E3BF /* rubicon-icon-font.ttf */ = {isa = PBXFileReference; name = "rubicon-icon-font.ttf"; path = "../node_modules/native-base/Fonts/rubicon-icon-font.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		A40EDCEFD2BF4EEA9A10763C /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; name = "SimpleLineIcons.ttf"; path = "../node_modules/native-base/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		343F5B2329B845E69597B539 /* Zocial.ttf */ = {isa = PBXFileReference; name = "Zocial.ttf"; path = "../node_modules/native-base/Fonts/Zocial.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +130,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDE4FC4B2239524500531134 /* libDeezer.a in Frameworks */,
 				EBB8117C1BFA0514F79CAF74 /* libPods-music-room.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -73,10 +158,12 @@
 		B56386381DB9693800A0598C = {
 			isa = PBXGroup;
 			children = (
+				CDE4FC292239524500531134 /* DeezerSDK */,
 				B56386431DB9693800A0598C /* music-room */,
 				B56386421DB9693800A0598C /* Products */,
 				5B29BC350A332C58878A9F13 /* Pods */,
 				1A42804E64B7E9E0AB8B6799 /* Frameworks */,
+				CB2E7811BCEB40529E89480A /* Resources */,
 			);
 			sourceTree = "<group>";
 		};
@@ -91,10 +178,18 @@
 		B56386431DB9693800A0598C /* music-room */ = {
 			isa = PBXGroup;
 			children = (
+				CDE4FC23223931A100531134 /* Counter.swift */,
+				CDE4FC252239323000531134 /* Counter.m */,
 				B56386471DB9693800A0598C /* AppDelegate.h */,
 				B56386481DB9693800A0598C /* AppDelegate.m */,
 				B56386501DB9693800A0598C /* Assets.xcassets */,
 				B563865B1DB96A5E00A0598C /* Supporting */,
+				CDE4FC222239319F00531134 /* music-room-Bridging-Header.h */,
+				CDE4FC4D2239549400531134 /* MusicBar.swift */,
+				CDE4FC5322398EC900531134 /* MusicBarViewManager.swift */,
+				CDE4FC5A2239907000531134 /* MusicBarView.swift */,
+				CDE4FC5522398F1600531134 /* MusicBarViewManager.m */,
+				CDE4FC4F223956B600531134 /* DeezerSession.swift */,
 			);
 			path = "music-room";
 			sourceTree = "<group>";
@@ -116,6 +211,79 @@
 			path = Supporting;
 			sourceTree = "<group>";
 		};
+		CDE4FC292239524500531134 /* DeezerSDK */ = {
+			isa = PBXGroup;
+			children = (
+				CDE4FC2A2239524500531134 /* libDeezer.a */,
+				CDE4FC2B2239524500531134 /* include */,
+				CDE4FC4A2239524500531134 /* DZRResources.bundle */,
+			);
+			path = DeezerSDK;
+			sourceTree = "<group>";
+		};
+		CDE4FC2B2239524500531134 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				CDE4FC2C2239524500531134 /* DZRPlaylist.h */,
+				CDE4FC2D2239524500531134 /* Deezer+Compatibility.h */,
+				CDE4FC2E2239524500531134 /* DeezerConnect+Compatibility.h */,
+				CDE4FC2F2239524500531134 /* DeezerRequestDelegate.h */,
+				CDE4FC302239524500531134 /* DZRPodcast.h */,
+				CDE4FC312239524500531134 /* DZRArtist.h */,
+				CDE4FC322239524500531134 /* DZREpisode.h */,
+				CDE4FC332239524500531134 /* DZRPlayer.h */,
+				CDE4FC342239524500531134 /* NSBundle+DZRBundle.h */,
+				CDE4FC352239524500531134 /* DZRObject+Compatibility.h */,
+				CDE4FC362239524500531134 /* DZRGenericCancelable.h */,
+				CDE4FC372239524500531134 /* DZRModel.h */,
+				CDE4FC382239524500531134 /* DZRCancelable.h */,
+				CDE4FC392239524500531134 /* DZRObject.h */,
+				CDE4FC3A2239524500531134 /* DZRNetworkRequest.h */,
+				CDE4FC3B2239524500531134 /* DZRManagedRadio.h */,
+				CDE4FC3C2239524500531134 /* NSError+DZRPlayer.h */,
+				CDE4FC3D2239524500531134 /* DZRRequestManager.h */,
+				CDE4FC3E2239524500531134 /* DZRRadio.h */,
+				CDE4FC3F2239524500531134 /* DZRUser.h */,
+				CDE4FC402239524500531134 /* DZRTrack.h */,
+				CDE4FC412239524500531134 /* DZRFolder.h */,
+				CDE4FC422239524500531134 /* DZRPlayableArray.h */,
+				CDE4FC432239524500531134 /* DZRComment.h */,
+				CDE4FC442239524500531134 /* DeezerConnect.h */,
+				CDE4FC452239524500531134 /* DZRGenre.h */,
+				CDE4FC462239524500531134 /* NSError+DZRModel.h */,
+				CDE4FC472239524500531134 /* DZRAlbum.h */,
+				CDE4FC482239524500531134 /* DZREditorial.h */,
+				CDE4FC492239524500531134 /* DZRObjectList.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		CB2E7811BCEB40529E89480A /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				806F06A91AF740CCB49D7532 /* AntDesign.ttf */,
+				B556869B96CF443393FE464D /* Entypo.ttf */,
+				258F7BEE86BE4175BA5FA988 /* EvilIcons.ttf */,
+				BEDF8488DCC44D14BA07E8D3 /* Feather.ttf */,
+				9648A5691039401597FD11AD /* FontAwesome.ttf */,
+				4C524B8511B54FD3AA9CF695 /* FontAwesome5_Brands.ttf */,
+				C452FF5A5EF64146A319E633 /* FontAwesome5_Regular.ttf */,
+				008D80839E664F81A120CFB5 /* FontAwesome5_Solid.ttf */,
+				5653E47DD05E4961A70FCA6A /* Foundation.ttf */,
+				2C2AA06DA87B4431A583A0E5 /* Ionicons.ttf */,
+				3F259A03EC8F44AEA0545400 /* MaterialCommunityIcons.ttf */,
+				787050CA044F410DB68CE5BD /* MaterialIcons.ttf */,
+				090E864DE4E44DAFB0356659 /* Octicons.ttf */,
+				32AF5B4A92974EED92CC7CFF /* Roboto_medium.ttf */,
+				EC1FEF260CD341B3A19DBC36 /* Roboto.ttf */,
+				188463AB8062446EA1F9E3BF /* rubicon-icon-font.ttf */,
+				A40EDCEFD2BF4EEA9A10763C /* SimpleLineIcons.ttf */,
+				343F5B2329B845E69597B539 /* Zocial.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -128,7 +296,6 @@
 				B563863D1DB9693800A0598C /* Sources */,
 				B563863E1DB9693800A0598C /* Frameworks */,
 				B563863F1DB9693800A0598C /* Resources */,
-				8D34C7FE3D99F20E5EA1B18A /* [CP] Embed Pods Frameworks */,
 				AA38385B7D8D0854176B72FC /* [CP] Copy Pods Resources */,
 				19D233B7204FDD7D0087ED51 /* Bundle Expo Assets */,
 			);
@@ -147,12 +314,13 @@
 		B56386391DB9693800A0598C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "650 Industries, Inc.";
 				TargetAttributes = {
 					B56386401DB9693800A0598C = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = C8D8QTF339;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -180,6 +348,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDE4FC4C2239524500531134 /* DZRResources.bundle in Resources */,
 				B5693E911FABD46800307FA4 /* launch_background_image.png in Resources */,
 				B501732B1DC01252003445D9 /* EXShell.plist in Resources */,
 				B5CFBF4F1EDE419400B4BE24 /* EXBuildConstants.plist in Resources */,
@@ -189,6 +358,24 @@
 				B5DB04801F3A684600E91581 /* shell-app-manifest.json in Resources */,
 				B5DB04811F3A684600E91581 /* shell-app.bundle in Resources */,
 				B56386511DB9693800A0598C /* Assets.xcassets in Resources */,
+				F81973B6525A4819B393EC2D /* AntDesign.ttf in Resources */,
+				9509C3127E96463C8C20B791 /* Entypo.ttf in Resources */,
+				6418DE9CEA2E4C8BA5332B66 /* EvilIcons.ttf in Resources */,
+				64B61E743151495590A35F02 /* Feather.ttf in Resources */,
+				CFEB252534F84ECEA493DBC8 /* FontAwesome.ttf in Resources */,
+				EFF3986C51B24E6F943F71FE /* FontAwesome5_Brands.ttf in Resources */,
+				C9D1D5E05FB1495CA08E650D /* FontAwesome5_Regular.ttf in Resources */,
+				43E01BD380E946B7A27F5066 /* FontAwesome5_Solid.ttf in Resources */,
+				E184B583717A4BD7B47B9CB9 /* Foundation.ttf in Resources */,
+				FD08378774354269BB84B149 /* Ionicons.ttf in Resources */,
+				EC729182E38F4D50912CFF8B /* MaterialCommunityIcons.ttf in Resources */,
+				6832A42E31694CE6AD2C14D0 /* MaterialIcons.ttf in Resources */,
+				9ADC59E4E43447588E806E05 /* Octicons.ttf in Resources */,
+				777623CC18034C278EA28DE3 /* Roboto_medium.ttf in Resources */,
+				FA6C1B6A0B7E4D02B1A39075 /* Roboto.ttf in Resources */,
+				4EB11A3533B644BB9E4B01DE /* rubicon-icon-font.ttf in Resources */,
+				B15B38C69FF143AAB228B034 /* SimpleLineIcons.ttf in Resources */,
+				E94D86FE34CD4DF1A96C52D7 /* Zocial.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,28 +402,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-music-room-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		8D34C7FE3D99F20E5EA1B18A /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-music-room/Pods-music-room-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		AA38385B7D8D0854176B72FC /* [CP] Copy Pods Resources */ = {
@@ -245,9 +420,24 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-music-room/Pods-music-room-resources.sh",
+				"${PODS_ROOT}/Amplitude-iOS/Amplitude/api.amplitude.com.der",
+				"${PODS_ROOT}/Amplitude-iOS/Amplitude/ComodoCaLimitedRsaCertificationAuthority.der",
+				"${PODS_ROOT}/Amplitude-iOS/Amplitude/ComodoRsaCA.der",
+				"${PODS_ROOT}/Amplitude-iOS/Amplitude/ComodoRsaDomainValidationCA.der",
+				"${PODS_ROOT}/FBSDKCoreKit/FacebookSDKStrings.bundle",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/api.amplitude.com.der",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ComodoCaLimitedRsaCertificationAuthority.der",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ComodoRsaCA.der",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ComodoRsaDomainValidationCA.der",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FacebookSDKStrings.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -275,8 +465,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDE4FC5B2239907000531134 /* MusicBarView.swift in Sources */,
+				CDE4FC5422398ECA00531134 /* MusicBarViewManager.swift in Sources */,
+				CDE4FC4E2239549400531134 /* MusicBar.swift in Sources */,
+				CDE4FC50223956B600531134 /* DeezerSession.swift in Sources */,
+				CDE4FC262239323000531134 /* Counter.m in Sources */,
 				B56386611DB96A5E00A0598C /* main.m in Sources */,
 				B56386491DB9693800A0598C /* AppDelegate.m in Sources */,
+				CDE4FC5622398F1600531134 /* MusicBarViewManager.m in Sources */,
+				CDE4FC24223931A100531134 /* Counter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,6 +493,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -303,6 +501,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -350,6 +549,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -357,6 +557,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -381,6 +582,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -390,11 +592,19 @@
 			baseConfigurationReference = 2C1548D9E4CB1AEFA5CCAE6D /* Pods-music-room.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = C8D8QTF339;
 				INFOPLIST_FILE = "$(SRCROOT)/music-room/Supporting/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "ios";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/DeezerSDK",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "music-room/music-room-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -404,11 +614,18 @@
 			baseConfigurationReference = A47FE4D7F70906B7DC8CE39B /* Pods-music-room.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = C8D8QTF339;
 				INFOPLIST_FILE = "$(SRCROOT)/music-room/Supporting/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "ios";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/DeezerSDK",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "music-room/music-room-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
