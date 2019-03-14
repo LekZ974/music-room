@@ -19,7 +19,7 @@ HomeScreen.propTypes = {
 
 const mapStateToProps = state => {
   return {
-    isLogged: !!state.user.email,
+    isLogged: !!state.user.email || !!state.user.name,
   };
 };
 

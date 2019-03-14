@@ -1,0 +1,6 @@
+{
+  "facebook" : {
+    "appId": "<FACEBOOK APP ID>",
+    "appSecret": "<FACEBOOK APP SECRET>",
+  }
+}

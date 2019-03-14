@@ -3,6 +3,8 @@ import React from 'react';
 import { StyleSheet, Alert } from 'react-native';
 import { lifecycle } from 'recompose';
 import { Icon } from 'native-base';
+
+import * as AuthService from '../../services/Auth';
 import { Content, ActivityIndicator, Text, CardItem, Card, View } from '../../components';
 import I18n from '../../i18n';
 
@@ -57,32 +59,16 @@ const AuthSocials = withStatus(props => {
     return <ActivityIndicator animating />;
   }
 
+  const handleSubmit = () => {
+    const profile = AuthService.FacebookLogin();
+    profile.then(data => onSubmit(data));
+  };
+
   return (
     <Content>
       <Text style={styles.title}>{I18n.t('login.auth.title')}</Text>
       <Card style={styles.card}>
-        <CardItem
-          style={styles.cardItem}
-          bordered
-          button
-          onPress={() =>
-            Alert.alert(
-              'Facebook',
-              'Here a modal to Connect Facebook',
-              [
-                {
-                  text: 'Log me',
-                  onPress: () => onSubmit({ email: 'email-with-facebook@toto.com' }),
-                },
-                {
-                  text: 'Cancel',
-                  style: 'cancel',
-                },
-              ],
-              { cancelable: false },
-            )
-          }
-        >
+        <CardItem style={styles.cardItem} bordered button onPress={handleSubmit}>
           <View style={styles.view}>
             <Icon active={false} name="logo-facebook" />
             <Text style={styles.text}>{I18n.t('login.auth.facebook')}</Text>
