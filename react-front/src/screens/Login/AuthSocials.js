@@ -59,43 +59,30 @@ const AuthSocials = withStatus(props => {
     return <ActivityIndicator animating />;
   }
 
-  const handleSubmit = () => {
-    const profile = AuthService.FacebookLogin();
-    profile.then(data => onSubmit(data));
+  const handleSubmit = platform => {
+    switch (platform) {
+      case 'facebook':
+        AuthService.FacebookLogin().then(data => onSubmit(data));
+        break;
+      case 'google':
+        AuthService.GoogleLogin().then(data => onSubmit(data.user));
+        break;
+      default:
+        break;
+    }
   };
 
   return (
     <Content>
       <Text style={styles.title}>{I18n.t('login.auth.title')}</Text>
       <Card style={styles.card}>
-        <CardItem style={styles.cardItem} bordered button onPress={handleSubmit}>
+        <CardItem style={styles.cardItem} bordered button onPress={() => handleSubmit('facebook')}>
           <View style={styles.view}>
             <Icon active={false} name="logo-facebook" />
             <Text style={styles.text}>{I18n.t('login.auth.facebook')}</Text>
           </View>
         </CardItem>
-        <CardItem
-          style={styles.cardItem}
-          button
-          bordered
-          onPress={() =>
-            Alert.alert(
-              'Google',
-              'Here a modal to Connect Google',
-              [
-                {
-                  text: 'Log me',
-                  onPress: () => onSubmit({ email: 'email-with-google@toto.com' }),
-                },
-                {
-                  text: 'Cancel',
-                  style: 'cancel',
-                },
-              ],
-              { cancelable: false },
-            )
-          }
-        >
+        <CardItem style={styles.cardItem} button bordered onPress={() => handleSubmit('google')}>
           <View style={styles.view}>
             <Icon active={false} name="logo-googleplus" />
             <Text style={styles.text}>{I18n.t('login.auth.google')}</Text>

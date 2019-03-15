@@ -2,7 +2,7 @@ import React from 'react';
 
 import { LinearGradient } from 'expo';
 
-import { SafeAreaView, StatusBar, Platform } from 'react-native';
+import { SafeAreaView } from 'react-native';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { Theme } from '../native-base-theme/default_theme';
@@ -39,7 +39,6 @@ const Container = ({ children, isLoading, color, center, linearGradient, ...prop
     <SafeAreaView
       style={{
         flex: 1,
-        marginTop: Platform.OS !== 'ios' ? StatusBar.currentHeight : 0,
         backgroundColor,
         padding: 10,
         ...(center && centerView),

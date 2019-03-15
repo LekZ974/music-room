@@ -1,4 +1,4 @@
-import { Facebook } from 'expo';
+import { Facebook, Google } from 'expo';
 import { Alert } from 'react-native';
 import config from '../../config';
 
@@ -33,7 +33,15 @@ async function FacebookLogin() {
   }
 }
 
-export { FacebookLogin };
+async function GoogleLogin() {
+  const clientId = config.google.clientWebId;
+
+  return Google.logInAsync({
+    clientId,
+  });
+}
+
+export { FacebookLogin, GoogleLogin };
 
 const AuthService = platform => {
   switch (platform) {
