@@ -24,7 +24,7 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "ios",
+      "bundleIdentifier": "com.jma.musicroom",
       "publishBundlePath": "ios/music-room/Supporting/shell-app.bundle",
       "publishManifestPath": "ios/music-room/Supporting/shell-app-manifest.json"
     },
