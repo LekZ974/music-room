@@ -34,11 +34,15 @@ async function FacebookLogin() {
 }
 
 async function GoogleLogin() {
-  const clientId = config.google.clientWebId;
-
-  return Google.logInAsync({
-    clientId,
+  const { type, user } = await Google.logInAsync({
+    iosClientId: config.google.clientIOSId,
+    androidClientId: config.google.clientAndroidId,
+    scopes: ['profile', 'email'],
   });
+
+  if (type === 'success') {
+    return user;
+  }
 }
 
 export { FacebookLogin, GoogleLogin };

@@ -65,7 +65,7 @@ const AuthSocials = withStatus(props => {
         AuthService.FacebookLogin().then(data => onSubmit(data));
         break;
       case 'google':
-        AuthService.GoogleLogin().then(data => onSubmit(data.user));
+        AuthService.GoogleLogin().then(data => onSubmit(data));
         break;
       default:
         break;
