@@ -1,4 +1,4 @@
-import { Facebook, Google } from 'expo';
+import { Facebook, Google, AuthSession } from 'expo';
 import { Alert } from 'react-native';
 import config from '../../config';
 
@@ -34,23 +34,77 @@ async function FacebookLogin() {
 }
 
 async function GoogleLogin() {
-  const { type, user } = await Google.logInAsync({
-    iosClientId: config.google.clientIOSId,
-    androidClientId: config.google.clientAndroidId,
-    scopes: ['profile', 'email'],
-  });
+  try {
+    const { type, user } = await Google.logInAsync({
+      iosClientId: config.google.clientIOSId,
+      androidClientId: config.google.clientAndroidId,
+      scopes: ['profile', 'email'],
+    });
 
-  if (type === 'success') {
-    return user;
+    switch (type) {
+      case 'success': {
+        return user;
+      }
+      case 'cancel': {
+        Alert.alert('Cancelled!', 'Login was cancelled!');
+        break;
+      }
+      default: {
+        Alert.alert('Oops!', 'Login failed!');
+      }
+    }
+  } catch ({ message }) {
+    Alert.alert(`Google Login Error: ${message}`);
   }
 }
 
-export { FacebookLogin, GoogleLogin };
+async function DeezerLogin() {
+  try {
+    const redirectUrl = AuthSession.getRedirectUrl();
+    const { type, params } = await AuthSession.startAsync({
+      authUrl:
+        `https://connect.deezer.com/oauth/auth.php?` +
+        `app_id=${config.deezer.appId}` +
+        `&redirect_uri=${encodeURIComponent(redirectUrl)}` +
+        `&perms=basic_access,email`,
+    });
+    switch (type) {
+      case 'success': {
+        const accessToken = await fetch(
+          `https://connect.deezer.com/oauth/access_token.php?` +
+            `app_id=${config.deezer.appId}` +
+            `&secret=${config.deezer.appSecret}` +
+            `&code=${params.code}`,
+        );
+        /* eslint no-underscore-dangle: ["error", { "allow": ["_bodyInit"] }] */
+        let token = accessToken._bodyInit.split('&')[0];
+        token = token.substring(token.lastIndexOf('=') + 1);
+        const response = await fetch(`https://api.deezer.com/user/me?access_token=${token}`);
+        return await response.json();
+      }
+      case 'cancel': {
+        Alert.alert('Cancelled!', 'Login was cancelled!');
+        break;
+      }
+      default: {
+        Alert.alert('Oops!', 'Login failed!');
+      }
+    }
+  } catch ({ message }) {
+    Alert.alert(`Deezer Login Error: ${message}`);
+  }
+}
+
+export { FacebookLogin, GoogleLogin, DeezerLogin };
 
 const AuthService = platform => {
   switch (platform) {
     case 'facebook':
       return FacebookLogin;
+    case 'google':
+      return GoogleLogin;
+    case 'deezer':
+      return DeezerLogin;
     default:
       return {};
   }

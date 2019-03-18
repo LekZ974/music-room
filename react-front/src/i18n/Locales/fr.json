@@ -1,7 +1,7 @@
 {
   "home": {
     "title": "Music Room",
-    "content": "Bientot ici une super App!",
+    "content": "Bienvenue %{name}!",
     "manageUserRooms": {
       "title": "Vos Rooms!"
     },

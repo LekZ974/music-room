@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { StyleSheet, Alert } from 'react-native';
+import { StyleSheet } from 'react-native';
 import { lifecycle } from 'recompose';
 import { Icon } from 'native-base';
 
@@ -67,6 +67,9 @@ const AuthSocials = withStatus(props => {
       case 'google':
         AuthService.GoogleLogin().then(data => onSubmit(data));
         break;
+      case 'deezer':
+        AuthService.DeezerLogin().then(data => onSubmit(data));
+        break;
       default:
         break;
     }
@@ -88,28 +91,7 @@ const AuthSocials = withStatus(props => {
             <Text style={styles.text}>{I18n.t('login.auth.google')}</Text>
           </View>
         </CardItem>
-        <CardItem
-          style={styles.cardItem}
-          button
-          bordered
-          onPress={() =>
-            Alert.alert(
-              'Deezer',
-              'Here a modal to Connect Deezer',
-              [
-                {
-                  text: 'Log me',
-                  onPress: () => onSubmit({ email: 'email-with-deezer@toto.com' }),
-                },
-                {
-                  text: 'Cancel',
-                  style: 'cancel',
-                },
-              ],
-              { cancelable: false },
-            )
-          }
-        >
+        <CardItem style={styles.cardItem} button bordered onPress={() => handleSubmit('deezer')}>
           <View style={styles.view}>
             <Icon active={false} type="FontAwesome" name="spotify" />
             <Text style={styles.text}>{I18n.t('login.auth.deezer')}</Text>
