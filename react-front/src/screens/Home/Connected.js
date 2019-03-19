@@ -15,7 +15,7 @@ const ConnectedScreen = ({ name }) => (
 );
 
 ConnectedScreen.propTypes = {
-  name: PropTypes.bool.isRequired,
+  name: PropTypes.string.isRequired,
 };
 
 const mapStateToProps = state => {
