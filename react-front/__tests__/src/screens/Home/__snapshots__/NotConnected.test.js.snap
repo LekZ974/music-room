@@ -3,11 +3,13 @@
 exports[`>>>> NotConnected - REACT-REDUX (Shallow + passing the {store} directly Snapshot 1`] = `
 <Connect(Container)
   center={true}
+  testID="homeNotConnected"
 >
   <View>
     <Logo
       sm={false}
       source={null}
+      testID="homeNotConnectedLogo"
     />
     <Button
       full={true}
@@ -20,6 +22,7 @@ exports[`>>>> NotConnected - REACT-REDUX (Shallow + passing the {store} directly
           "margin": 16,
         }
       }
+      testID="homeNotConnectedLoginButton"
     />
     <Button
       full={true}
@@ -32,6 +35,7 @@ exports[`>>>> NotConnected - REACT-REDUX (Shallow + passing the {store} directly
           "margin": 16,
         }
       }
+      testID="homeNotConnectedSignUpButton"
     />
   </View>
 </Connect(Container)>

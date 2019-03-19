@@ -15,16 +15,18 @@ const styles = StyleSheet.create({
 });
 
 const NotConnectedScreen = ({ navigation }) => (
-  <Container center>
+  <Container center testID="homeNotConnected">
     <View>
-      <Logo />
+      <Logo testID="homeNotConnectedLogo" />
       <Button
+        testID="homeNotConnectedLoginButton"
         label={I18n.t('notConnected.loginButton')}
         style={styles.button}
         onPress={() => navigation.navigate('Login')}
         full
       />
       <Button
+        testID="homeNotConnectedSignUpButton"
         label={I18n.t('notConnected.signUpButton')}
         style={styles.button}
         onPress={() => navigation.navigate('SignUp')}

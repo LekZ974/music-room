@@ -31,6 +31,7 @@
   },
   "jest": {
     "preset": "jest-expo",
+    "testMatch": ["**/__tests__/**/*.[jt]s?(x)"],
     "transformIgnorePatterns": [
       "/node_modules/(?!native-base)/"
     ],
@@ -79,11 +80,11 @@
     "babel-eslint": "^10.0.1",
     "babel-plugin-module-resolver": "^3.1.1",
     "babel-preset-expo": "^5.0.0",
+    "detox": "^10.0.12",
+    "detox-expo-helpers": "^0.6.0",
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.10.0",
     "enzyme-to-json": "^3.3.5",
-    "detox": "^10.0.12",
-    "detox-expo-helpers": "^0.6.0",
     "eslint": "^5.14.1",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-prettier": "^4.1.0",
@@ -107,11 +108,12 @@
   "private": true,
   "detox": {
     "test-runner": "jest",
+    "runner-config": "e2e/config.json",
     "configurations": {
-        "ios.sim": {
-          "binaryPath": "bin/Exponent.app",
-          "type": "ios.simulator",
-          "name": "iPhone Xʀ"
+      "ios.sim": {
+        "binaryPath": "bin/Exponent.app",
+        "type": "ios.simulator",
+        "name": "iPhone Xʀ"
       }
     }
   }

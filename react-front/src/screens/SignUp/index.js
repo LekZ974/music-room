@@ -44,7 +44,7 @@ const SignUpScreen = props => {
     <Container center color="light">
       <KeyboardAwareScrollView enableOnAndroid>
         <View style={{ padding: 10 }}>
-          <Title>{I18n.t('signUp.title')}</Title>
+          <Title testID="signUpScreenTitle">{I18n.t('signUp.title')}</Title>
           <SignUpForm onSubmit={signUpUser} />
           <Button
             style={[styles.button, { backgroundColor: Theme.palette.secondary }]}

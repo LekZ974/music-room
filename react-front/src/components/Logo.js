@@ -4,7 +4,7 @@ import { Image, View } from 'react-native';
 import MR_LOGO from '../../assets/logo.png';
 
 const Logo = props => {
-  const { source, sm } = props;
+  const { source, sm, testID } = props;
   return (
     <View>
       <Image
@@ -14,6 +14,7 @@ const Logo = props => {
           height: sm ? 50 : 150,
         }}
         resizeMode="contain"
+        testID={testID}
       />
     </View>
   );
@@ -22,6 +23,7 @@ const Logo = props => {
 Logo.defaultProps = {
   source: null,
   sm: false,
+  testID: '',
 };
 
 const ImageURISourcePropType = PropTypes.shape({
@@ -42,6 +44,7 @@ Logo.propTypes = {
     PropTypes.arrayOf(ImageURISourcePropType),
   ]),
   sm: PropTypes.bool,
+  testID: PropTypes.string,
 };
 
 export default Logo;

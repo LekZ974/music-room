@@ -42,7 +42,7 @@ const LoginScreen = props => {
     <Container center color="light">
       <KeyboardAwareScrollView enableOnAndroid>
         <View style={{ padding: 10 }}>
-          <Title>{I18n.t('login.title')}</Title>
+          <Title testID="loginScreenTitle">{I18n.t('login.title')}</Title>
           <LoginForm onSubmit={signInUser} goToForgotPassword={goToForgotPassword} />
           <Button
             style={[styles.button, { backgroundColor: Theme.palette.secondary }]}
