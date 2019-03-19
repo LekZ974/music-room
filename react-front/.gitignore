@@ -8,5 +8,4 @@ npm-debug.*
 yarn-error.log
 coverage/
 bin/Exponent.app
-bin/
 config.json
